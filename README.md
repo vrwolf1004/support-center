@@ -17,7 +17,6 @@
 
 문서 구성 규칙:
 - 이 저장소의 문서는 제품 유형(Chrome 확장, 다른 확장, 데스크톱 앱 등)에 상관없이 **프로젝트명** 기준으로 구성합니다. 예: `docs/StockPulse/`, `docs/AnotherProject/`.
-- 문서 내부에서 설치·지원 절차는 제품별로 통일된 템플릿을 사용해 유지보수성을 높이세요.
 
 문의처: vrwolf.remote@gmail.com
 

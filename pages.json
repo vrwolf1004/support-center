@@ -1,6 +1,5 @@
 [
   { "path": "README.md", "title": "Support Center" },
   { "path": "docs/PRIVACY.md", "title": "개인정보 처리방침" },
-  { "path": "docs/stockpulse/README.md", "title": "StockPulse" },
-  { "path": "https://github.com/vrwolf1004/support-center/issues", "title": "이슈접수" }
+  { "path": "docs/stockpulse/README.md", "title": "StockPulse" }
 ]
