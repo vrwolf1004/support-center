@@ -1,0 +1,17 @@
+/* ── Nouveau 테마 토큰 ── */
+:root {
+    --crema-primary: #2D6A4F;
+    --crema-accent: #52b788;
+    --crema-bg: #fdf6e3;
+    --crema-surface: #f5ebe0;
+    --crema-text: #2c1810;
+    --crema-text-on-primary: #ffffff;
+    --crema-text-on-accent: #ffffff;
+    --crema-border: #8b6914;
+    --crema-radius-sm: 20px;
+    --crema-radius-md: 24px;
+    --crema-font: Palatino,'Book Antiqua',Georgia,serif;
+    --crema-shadow: 0 4px 12px rgba(44,24,16,0.15);
+    --crema-border-width: 1px;
+    --crema-backdrop-filter: none;
+}
