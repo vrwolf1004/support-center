@@ -1,15 +1,30 @@
-# Support — [Your Extension Name]
+# Support Center
 
-이 리포지토리는 확장 프로그램의 공개 지원 전용 문서용입니다. 소스 코드는 private 저장소에 보관하고, 이 리포지토리는 사용자 문서·이슈·프라이버시·릴리스 정보를 제공합니다.
+이 저장소는 제품군(Chrome 확장, 데스크톱 앱 등)의 공개 지원·문서 허브용입니다.  
+코드는 별도의 private 저장소에 보관하고, 이 리포지토리는 사용자용 가이드·프라이버시·지원 절차·릴리스 정보를 제공합니다.
 
-- Support (Issues): https://github.com/<your-org>/<repo>/issues
-- Privacy Policy: https://<your-org>.github.io/<repo>/PRIVACY.html
+- **리포지토:** https://github.com/vrwolf1004/support-center
+- **Support (Issues):** https://github.com/vrwolf1004/support-center/issues
 
-사용자 안내:
-- 버그 신고 시: Chrome 버전, 확장 버전, 재현 단계, 콘솔 에러 포함
-- 기능 요청 시: 사용 시나리오와 기대 동작 기술
+목표:
+- 사용자 문의 접수와 해결 흐름 정리
+- 제품별 설치/업데이트 가이드 제공
+- 프라이버시·보안 정책 공개
 
-GitHub Pages 배포:
-1. `docs/` 폴더에 문서 넣기
-2. Repo → Settings → Pages → 브랜치/폴더 선택
-3. 발급된 URL을 Chrome Web Store의 Support/Privacy URL로 사용
+빠른 안내:
+- 버그 신고 시 포함 항목: 제품명/버전, 운영체제·브라우저 버전, 재현 단계, 콘솔 에러 및 스크린샷
+- 기능 요청: 사용 시나리오와 기대 동작 설명
+
+GitHub Pages 설정 (권장):
+1. `docs/` 폴더에 공개 문서(html/md) 넣기
+2. Repository → Settings → Pages에서 브랜치/폴더 선택
+3. 발급된 Pages URL을 Web Store 또는 제품 안내 페이지에 입력
+
+제품 문서 위치(예):
+- `products/chrome-extension/` — Chrome 확장 관련 문서
+- `products/stockpulse/` — StockPulse 관련 문서
+
+문의처: vrwolf.remote@gmail.com
+
+---
+_이 리포지토리는 지원 전용 문서만을 공개하며, 소스 코드는 private 저장소로 관리됩니다._
