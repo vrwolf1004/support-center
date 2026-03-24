@@ -2,18 +2,199 @@
 <html lang="ko">
 <head>
     <meta charset="UTF-8">
-    <title>MD Viewer</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Support Center</title>
     <!-- Marked.js 라이브러리 CDN -->
     <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+    <style>
+        /* ── Nouveau 테마 토큰 ── */
+        :root {
+            --crema-primary: #2D6A4F;
+            --crema-accent: #52b788;
+            --crema-bg: #fdf6e3;
+            --crema-surface: #f5ebe0;
+            --crema-text: #2c1810;
+            --crema-text-on-primary: #ffffff;
+            --crema-text-on-accent: #ffffff;
+            --crema-border: #8b6914;
+            --crema-radius-sm: 20px;
+            --crema-radius-md: 24px;
+            --crema-font: Palatino,'Book Antiqua',Georgia,serif;
+            --crema-shadow: 0 4px 12px rgba(44,24,16,0.15);
+            --crema-border-width: 1px;
+            --crema-backdrop-filter: none;
+        }
+
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+
+        body {
+            background-color: var(--crema-bg);
+            color: var(--crema-text);
+            font-family: var(--crema-font);
+            min-height: 100vh;
+        }
+
+        /* ── 레이아웃 ── */
+        .layout {
+            display: flex;
+            min-height: 100vh;
+        }
+
+        /* ── 사이드 네비게이션 ── */
+        nav {
+            width: 240px;
+            min-width: 240px;
+            background-color: var(--crema-surface);
+            border-right: var(--crema-border-width) solid var(--crema-border);
+            padding: 24px 16px;
+            box-shadow: var(--crema-shadow);
+        }
+        nav h3 {
+            font-size: 18px;
+            color: var(--crema-primary);
+            margin-bottom: 16px;
+            padding-bottom: 12px;
+            border-bottom: var(--crema-border-width) solid var(--crema-border);
+        }
+        nav ul {
+            list-style: none;
+            padding-left: 0;
+        }
+        nav li {
+            margin-bottom: 4px;
+        }
+        nav a {
+            display: block;
+            padding: 8px 12px;
+            color: var(--crema-text);
+            text-decoration: none;
+            border-radius: var(--crema-radius-sm);
+            font-size: 14px;
+            transition: background-color 0.2s, color 0.2s;
+        }
+        nav a:hover {
+            background-color: var(--crema-primary);
+            color: var(--crema-text-on-primary);
+        }
+        nav a.active {
+            background-color: var(--crema-primary);
+            color: var(--crema-text-on-primary);
+            font-weight: bold;
+        }
+
+        /* ── 메인 콘텐츠 ── */
+        main {
+            flex: 1;
+            padding: 32px 40px;
+            max-width: 900px;
+        }
+
+        /* ── 마크다운 렌더링 스타일 ── */
+        #content h1 {
+            font-size: 28px;
+            color: var(--crema-primary);
+            margin-bottom: 16px;
+            padding-bottom: 12px;
+            border-bottom: var(--crema-border-width) solid var(--crema-border);
+        }
+        #content h2 {
+            font-size: 22px;
+            color: var(--crema-primary);
+            margin-top: 28px;
+            margin-bottom: 12px;
+        }
+        #content h3 {
+            font-size: 18px;
+            color: var(--crema-text);
+            margin-top: 20px;
+            margin-bottom: 8px;
+        }
+        #content p {
+            font-size: 15px;
+            line-height: 1.8;
+            margin-bottom: 12px;
+        }
+        #content ul, #content ol {
+            margin: 8px 0 16px 24px;
+            line-height: 1.8;
+        }
+        #content a {
+            color: var(--crema-primary);
+            text-decoration: underline;
+        }
+        #content a:hover {
+            color: var(--crema-accent);
+        }
+        #content code {
+            background-color: var(--crema-surface);
+            border: var(--crema-border-width) solid var(--crema-border);
+            border-radius: 4px;
+            padding: 2px 6px;
+            font-family: 'Courier New', monospace;
+            font-size: 13px;
+        }
+        #content pre {
+            background-color: var(--crema-surface);
+            border: var(--crema-border-width) solid var(--crema-border);
+            border-radius: var(--crema-radius-md);
+            padding: 16px 20px;
+            overflow-x: auto;
+            margin: 12px 0 16px;
+            box-shadow: var(--crema-shadow);
+        }
+        #content pre code {
+            background: none;
+            border: none;
+            padding: 0;
+        }
+        #content blockquote {
+            border-left: 4px solid var(--crema-accent);
+            background-color: var(--crema-surface);
+            padding: 12px 16px;
+            margin: 12px 0;
+            border-radius: 0 var(--crema-radius-sm) var(--crema-radius-sm) 0;
+        }
+        #content table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 12px 0 16px;
+        }
+        #content th {
+            background-color: var(--crema-primary);
+            color: var(--crema-text-on-primary);
+            padding: 10px 14px;
+            text-align: left;
+            font-size: 14px;
+        }
+        #content th:first-child { border-radius: var(--crema-radius-sm) 0 0 0; }
+        #content th:last-child  { border-radius: 0 var(--crema-radius-sm) 0 0; }
+        #content td {
+            padding: 10px 14px;
+            border-bottom: var(--crema-border-width) solid var(--crema-border);
+            font-size: 14px;
+        }
+        #content tr:hover td {
+            background-color: var(--crema-surface);
+        }
+        #content hr {
+            border: none;
+            border-top: var(--crema-border-width) solid var(--crema-border);
+            margin: 24px 0;
+        }
+        #content img {
+            max-width: 100%;
+            border-radius: var(--crema-radius-md);
+            box-shadow: var(--crema-shadow);
+        }
+    </style>
 </head>
 <body>
-    <!-- 마크다운이 표시될 영역 -->
-    <div style="display:flex;gap:16px">
-        <nav id="nav" style="width:220px; border-right:1px solid #ddd; padding-right:12px">
-            <h3>문서</h3>
-            <ul id="nav-list" style="list-style:none;padding-left:0"></ul>
+    <div class="layout">
+        <nav id="nav">
+            <h3>Support Center</h3>
+            <ul id="nav-list"></ul>
         </nav>
-        <main style="flex:1; padding-left:12px">
+        <main>
             <div id="content">Loading...</div>
         </main>
     </div>
@@ -31,9 +212,11 @@
                     a.href = '#' + encodeURIComponent(p.path);
                     a.textContent = p.title;
                     a.style.cursor = 'pointer';
+                    a.dataset.path = p.path;
                     a.addEventListener('click', (ev) => {
                         ev.preventDefault();
                         navigateTo(p.path, true);
+                        setActiveNav(p.path);
                     });
                     li.appendChild(a);
                     list.appendChild(li);
@@ -41,10 +224,17 @@
                 // initial route
                 const initial = location.hash ? decodeURIComponent(location.hash.slice(1)) : 'README.md';
                 navigateTo(initial, false);
+                setActiveNav(initial);
             } catch (err) {
                 console.error('Failed to load pages.json', err);
                 document.getElementById('content').textContent = '문서 목록을 불러오지 못했습니다.';
             }
+        }
+
+        function setActiveNav(path) {
+            document.querySelectorAll('#nav-list a').forEach(a => {
+                a.classList.toggle('active', a.dataset.path === path);
+            });
         }
 
         async function navigateTo(path, push) {
@@ -63,6 +253,7 @@
         window.addEventListener('popstate', (e) => {
             const path = (e.state && e.state.path) || (location.hash ? decodeURIComponent(location.hash.slice(1)) : 'README.md');
             navigateTo(path, false);
+            setActiveNav(path);
         });
 
         loadPages();
