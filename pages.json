@@ -1,5 +1,5 @@
 [
-  { "path": "README.md", "title": "Support Center" },
+  { "path": "README.md", "title": "안내" },
   { "path": "docs/PRIVACY.md", "title": "개인정보 처리방침" },
   { "path": "docs/stockpulse/README.md", "title": "StockPulse" }
 ]
