@@ -11,14 +11,20 @@
     <div id="content">Loading...</div>
 
     <script>
-        // 1. md 파일 가져오기
-        fetch('readme.md')
-            .then(response => response.text())
+        // 1. md 파일 가져오기 (대소문자 정확히 매칭)
+        fetch('README.md')
+            .then(response => {
+                if (!response.ok) throw new Error(`Failed to fetch README.md: ${response.status}`);
+                return response.text();
+            })
             .then(data => {
                 // 2. 마크다운을 HTML로 변환하여 div에 삽입
                 document.getElementById('content').innerHTML = marked.parse(data);
             })
-            .catch(err => console.error(err));
+            .catch(err => {
+                console.error(err);
+                document.getElementById('content').textContent = '문서를 불러오지 못했습니다.';
+            });
     </script>
 </body>
 </html>
