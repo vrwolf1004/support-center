@@ -1,9 +1,5 @@
 [
   { "path": "README.md", "title": "Support Center" },
-  { "path": "SUPPORT.md", "title": "지원 안내" },
-  { "path": "PRIVACY.md", "title": "개인정보 처리방침 (요약)" },
-  { "path": "docs/stockpulse/README.md", "title": "StockPulse" },
-  { "path": "docs/stockpulse/SUPPORT.md", "title": "StockPulse 지원 안내" },
-  { "path": "docs/stockpulse/PRIVACY.md", "title": "StockPulse 개인정보 처리 방침 요약" },
-  { "path": "docs/stockpulse/index.md", "title": "StockPulse 사용 가이드" }
+  { "path": "docs/PRIVACY.md", "title": "개인정보 처리방침 (요약)" },
+  { "path": "docs/stockpulse/README.md", "title": "StockPulse" }
 ]
