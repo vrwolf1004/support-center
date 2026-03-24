@@ -8,23 +8,64 @@
 </head>
 <body>
     <!-- 마크다운이 표시될 영역 -->
-    <div id="content">Loading...</div>
+    <div style="display:flex;gap:16px">
+        <nav id="nav" style="width:220px; border-right:1px solid #ddd; padding-right:12px">
+            <h3>문서</h3>
+            <ul id="nav-list" style="list-style:none;padding-left:0"></ul>
+        </nav>
+        <main style="flex:1; padding-left:12px">
+            <div id="content">Loading...</div>
+        </main>
+    </div>
 
     <script>
-        // 1. md 파일 가져오기 (대소문자 정확히 매칭)
-        fetch('README.md')
-            .then(response => {
-                if (!response.ok) throw new Error(`Failed to fetch README.md: ${response.status}`);
-                return response.text();
-            })
-            .then(data => {
-                // 2. 마크다운을 HTML로 변환하여 div에 삽입
-                document.getElementById('content').innerHTML = marked.parse(data);
-            })
-            .catch(err => {
+        // 페이지 목록 로드
+        async function loadPages() {
+            try {
+                const res = await fetch('pages.json');
+                const pages = await res.json();
+                const list = document.getElementById('nav-list');
+                pages.forEach(p => {
+                    const li = document.createElement('li');
+                    const a = document.createElement('a');
+                    a.href = '#' + encodeURIComponent(p.path);
+                    a.textContent = p.title;
+                    a.style.cursor = 'pointer';
+                    a.addEventListener('click', (ev) => {
+                        ev.preventDefault();
+                        navigateTo(p.path, true);
+                    });
+                    li.appendChild(a);
+                    list.appendChild(li);
+                });
+                // initial route
+                const initial = location.hash ? decodeURIComponent(location.hash.slice(1)) : 'README.md';
+                navigateTo(initial, false);
+            } catch (err) {
+                console.error('Failed to load pages.json', err);
+                document.getElementById('content').textContent = '문서 목록을 불러오지 못했습니다.';
+            }
+        }
+
+        async function navigateTo(path, push) {
+            try {
+                const res = await fetch(path);
+                if (!res.ok) throw new Error(`Failed to fetch ${path}: ${res.status}`);
+                const md = await res.text();
+                document.getElementById('content').innerHTML = marked.parse(md);
+                if (push) history.pushState({path}, '', '#' + encodeURIComponent(path));
+            } catch (err) {
                 console.error(err);
                 document.getElementById('content').textContent = '문서를 불러오지 못했습니다.';
-            });
+            }
+        }
+
+        window.addEventListener('popstate', (e) => {
+            const path = (e.state && e.state.path) || (location.hash ? decodeURIComponent(location.hash.slice(1)) : 'README.md');
+            navigateTo(path, false);
+        });
+
+        loadPages();
     </script>
 </body>
 </html>

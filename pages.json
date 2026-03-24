@@ -1,0 +1,11 @@
+[
+  { "path": "README.md", "title": "Support Center" },
+  { "path": "SUPPORT.md", "title": "지원 안내" },
+  { "path": "PRIVACY.md", "title": "개인정보 처리방침 (요약)" },
+  { "path": "products/stockpulse/README.md", "title": "StockPulse" },
+  { "path": "products/stockpulse/SUPPORT.md", "title": "StockPulse 지원 안내" },
+  { "path": "products/stockpulse/PRIVACY.md", "title": "StockPulse 개인정보 처리 방침 요약" },
+  { "path": ".github/ISSUE_TEMPLATE/bug_report.md", "title": "Bug Report Template" },
+  { "path": ".github/ISSUE_TEMPLATE/feature_request.md", "title": "Feature Request Template" },
+  { "path": "docs/stockpulse/index.md", "title": "StockPulse 사용 가이드" }
+]
