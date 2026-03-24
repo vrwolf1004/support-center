@@ -21,8 +21,12 @@ GitHub Pages 설정 (권장):
 3. 발급된 Pages URL을 Web Store 또는 제품 안내 페이지에 입력
 
 제품 문서 위치(예):
-- `products/chrome-extension/` — Chrome 확장 관련 문서
 - `products/stockpulse/` — StockPulse 관련 문서
+
+문서 구성 규칙:
+- 이 저장소의 문서는 제품 유형(Chrome 확장, 다른 확장, 데스크톱 앱 등)에 상관없이 **프로젝트명** 기준으로 구성합니다. 예: `products/StockPulse/`, `products/AnotherProject/`.
+- 각 프로젝트 디렉터리는 다음 항목을 포함해야 합니다: `README.md`(제품 개요), `SUPPORT.md`(지원 안내), `PRIVACY.md`(프라이버시), 그리고 필요 시 `docs/`(GitHub Pages용 공개 문서).
+- 문서 내부에서 설치·지원 절차는 제품별로 통일된 템플릿을 사용해 유지보수성을 높이세요.
 
 문의처: vrwolf.remote@gmail.com
 
