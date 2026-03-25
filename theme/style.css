@@ -11,6 +11,7 @@ body {
 .layout {
     display: flex;
     min-height: 100vh;
+    flex-direction: row;
 }
 
 /* ── 사이드 네비게이션 ── */
@@ -21,6 +22,7 @@ nav {
     border-right: var(--crema-border-width) solid var(--crema-border);
     padding: 24px 16px;
     box-shadow: var(--crema-shadow);
+    overflow-y: auto;
 }
 nav h3 {
     font-size: 18px;
@@ -60,6 +62,7 @@ main {
     flex: 1;
     padding: 32px 40px;
     max-width: 900px;
+    overflow-y: auto;
 }
 
 /* ── 마크다운 렌더링 스타일 ── */
@@ -158,4 +161,163 @@ main {
     max-width: 100%;
     border-radius: var(--crema-radius-md);
     box-shadow: var(--crema-shadow);
+}
+
+/* ── 태블릿 (768px 이하) ── */
+@media (max-width: 768px) {
+    .layout {
+        flex-direction: column;
+    }
+
+    nav {
+        width: 100%;
+        min-width: unset;
+        border-right: none;
+        border-bottom: var(--crema-border-width) solid var(--crema-border);
+        padding: 16px 12px;
+        max-height: 200px;
+        overflow-y: auto;
+    }
+
+    nav h3 {
+        font-size: 16px;
+        margin-bottom: 12px;
+        padding-bottom: 8px;
+    }
+
+    nav ul {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 8px;
+    }
+
+    nav li {
+        margin-bottom: 0;
+        flex: 0 0 auto;
+    }
+
+    nav a {
+        padding: 6px 10px;
+        font-size: 13px;
+        white-space: nowrap;
+    }
+
+    main {
+        padding: 24px 20px;
+    }
+
+    #content h1 {
+        font-size: 24px;
+        margin-bottom: 12px;
+    }
+
+    #content h2 {
+        font-size: 20px;
+        margin-top: 20px;
+        margin-bottom: 10px;
+    }
+
+    #content h3 {
+        font-size: 16px;
+        margin-top: 16px;
+        margin-bottom: 8px;
+    }
+
+    #content p {
+        font-size: 14px;
+    }
+
+    #content table {
+        font-size: 13px;
+    }
+
+    #content th, #content td {
+        padding: 8px 10px;
+    }
+
+    #content pre {
+        padding: 12px 16px;
+        font-size: 12px;
+    }
+}
+
+/* ── 모바일 (480px 이하) ── */
+@media (max-width: 480px) {
+    nav {
+        max-height: 150px;
+        padding: 12px 8px;
+    }
+
+    nav h3 {
+        font-size: 14px;
+        margin-bottom: 8px;
+        padding-bottom: 6px;
+    }
+
+    nav a {
+        padding: 6px 8px;
+        font-size: 12px;
+    }
+
+    main {
+        padding: 16px 16px;
+        max-width: 100%;
+    }
+
+    #content h1 {
+        font-size: 20px;
+        margin-bottom: 10px;
+    }
+
+    #content h2 {
+        font-size: 18px;
+        margin-top: 16px;
+        margin-bottom: 8px;
+    }
+
+    #content h3 {
+        font-size: 14px;
+        margin-top: 12px;
+        margin-bottom: 6px;
+    }
+
+    #content p {
+        font-size: 13px;
+        line-height: 1.6;
+        margin-bottom: 10px;
+    }
+
+    #content ul, #content ol {
+        margin: 6px 0 12px 16px;
+        font-size: 13px;
+    }
+
+    #content code {
+        font-size: 12px;
+        padding: 2px 4px;
+    }
+
+    #content pre {
+        padding: 10px 12px;
+        font-size: 11px;
+        border-radius: var(--crema-radius-sm);
+    }
+
+    #content table {
+        font-size: 12px;
+        margin: 10px 0 12px;
+    }
+
+    #content th, #content td {
+        padding: 6px 8px;
+    }
+
+    #content blockquote {
+        padding: 10px 12px;
+        margin: 10px 0;
+    }
+
+    #content hr {
+        margin: 16px 0;
+    }
 }
