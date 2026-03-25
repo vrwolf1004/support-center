@@ -5,52 +5,67 @@ body {
     color: var(--crema-text);
     font-family: var(--crema-font);
     min-height: 100vh;
-}
-
-/* ── 레이아웃 ── */
-.layout {
     display: flex;
-    min-height: 100vh;
-    flex-direction: row;
+    flex-direction: column;
 }
 
-/* ── 사이드 네비게이션 ── */
+/* ── 상단 네비게이션 (고정) ── */
 nav {
-    width: 240px;
-    min-width: 240px;
     background-color: var(--crema-surface);
-    border-right: var(--crema-border-width) solid var(--crema-border);
-    padding: 24px 16px;
+    border-bottom: var(--crema-border-width) solid var(--crema-border);
     box-shadow: var(--crema-shadow);
-    overflow-y: auto;
+    position: sticky;
+    top: 0;
+    z-index: 100;
 }
+
+.nav-inner {
+    display: flex;
+    align-items: center;
+    padding: 16px 24px;
+    gap: 24px;
+}
+
 nav h3 {
     font-size: 18px;
     color: var(--crema-primary);
-    margin-bottom: 16px;
-    padding-bottom: 12px;
-    border-bottom: var(--crema-border-width) solid var(--crema-border);
+    margin: 0;
+    padding: 0;
+    border: none;
+    white-space: nowrap;
+    font-weight: bold;
 }
+
 nav ul {
     list-style: none;
-    padding-left: 0;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    gap: 4px;
+    flex-wrap: wrap;
+    align-items: center;
 }
+
 nav li {
-    margin-bottom: 4px;
+    margin: 0;
 }
+
 nav a {
-    display: block;
+    display: inline-block;
     padding: 8px 12px;
     color: var(--crema-text);
     text-decoration: none;
     border-radius: var(--crema-radius-sm);
     font-size: 14px;
     transition: background-color 0.2s, color 0.2s;
+    white-space: nowrap;
 }
+
 nav a:hover {
     background-color: var(--crema-primary);
     color: var(--crema-text-on-primary);
 }
+
 nav a.active {
     background-color: var(--crema-primary);
     color: var(--crema-text-on-primary);
@@ -61,8 +76,15 @@ nav a.active {
 main {
     flex: 1;
     padding: 32px 40px;
-    max-width: 900px;
+    max-width: 100%;
     overflow-y: auto;
+    display: flex;
+    justify-content: center;
+}
+
+#content {
+    width: 100%;
+    max-width: 900px;
 }
 
 /* ── 마크다운 렌더링 스타일 ── */
@@ -165,41 +187,26 @@ main {
 
 /* ── 태블릿 (768px 이하) ── */
 @media (max-width: 768px) {
-    .layout {
-        flex-direction: column;
-    }
-
-    nav {
-        width: 100%;
-        min-width: unset;
-        border-right: none;
-        border-bottom: var(--crema-border-width) solid var(--crema-border);
-        padding: 16px 12px;
-        max-height: 200px;
-        overflow-y: auto;
+    .nav-inner {
+        padding: 12px 16px;
+        gap: 16px;
+        flex-wrap: wrap;
     }
 
     nav h3 {
         font-size: 16px;
-        margin-bottom: 12px;
-        padding-bottom: 8px;
+        order: -1;
+        width: 100%;
     }
 
     nav ul {
-        display: flex;
-        flex-wrap: wrap;
-        gap: 8px;
-    }
-
-    nav li {
-        margin-bottom: 0;
-        flex: 0 0 auto;
+        gap: 4px;
+        width: 100%;
     }
 
     nav a {
         padding: 6px 10px;
-        font-size: 13px;
-        white-space: nowrap;
+        font-size: 12px;
     }
 
     main {
@@ -243,20 +250,18 @@ main {
 
 /* ── 모바일 (480px 이하) ── */
 @media (max-width: 480px) {
-    nav {
-        max-height: 150px;
-        padding: 12px 8px;
+    .nav-inner {
+        padding: 10px 12px;
+        gap: 8px;
     }
 
     nav h3 {
         font-size: 14px;
-        margin-bottom: 8px;
-        padding-bottom: 6px;
     }
 
     nav a {
         padding: 6px 8px;
-        font-size: 12px;
+        font-size: 11px;
     }
 
     main {
