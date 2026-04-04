@@ -10,6 +10,7 @@
 
 ## 문의 및 지원
 
+- **[문의하기](contact.html)** — 폼을 통한 문의 (권장)
 - **이메일**: dev.ohyt@gmail.com
 - [GitHub Issues](https://github.com/vrwolf1004/support-center/issues) (GitHub 계정 필요)
 - [개인정보 처리방침](./#docs%2FPRIVACY.md)

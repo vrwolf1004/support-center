@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>문의하기 - Support Center</title>
+    <link rel="stylesheet" href="theme/artnouveau.css">
+    <link rel="stylesheet" href="theme/style.css">
+    <style>
+        .contact-container {
+            max-width: 600px;
+            margin: 32px auto;
+            padding: 24px;
+            background-color: var(--crema-surface);
+            border-radius: var(--crema-radius-md);
+            box-shadow: var(--crema-shadow);
+        }
+
+        .contact-container h1 {
+            color: var(--crema-primary);
+            margin-bottom: 24px;
+            border-bottom: 1px solid var(--crema-border);
+            padding-bottom: 16px;
+        }
+
+        .form-group {
+            margin-bottom: 20px;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 8px;
+            color: var(--crema-text);
+            font-weight: bold;
+            font-size: 14px;
+        }
+
+        .form-group input,
+        .form-group textarea {
+            width: 100%;
+            padding: 10px 12px;
+            border: 1px solid var(--crema-border);
+            border-radius: 4px;
+            font-family: var(--crema-font);
+            font-size: 14px;
+            color: var(--crema-text);
+            background-color: var(--crema-bg);
+            box-sizing: border-box;
+        }
+
+        .form-group input:focus,
+        .form-group textarea:focus {
+            outline: none;
+            border-color: var(--crema-primary);
+            box-shadow: 0 0 0 3px rgba(45, 106, 79, 0.1);
+        }
+
+        .form-group textarea {
+            min-height: 200px;
+            resize: vertical;
+        }
+
+        .form-actions {
+            display: flex;
+            gap: 12px;
+            margin-top: 24px;
+        }
+
+        .btn {
+            flex: 1;
+            padding: 10px 16px;
+            border: none;
+            border-radius: var(--crema-radius-sm);
+            font-size: 14px;
+            font-family: var(--crema-font);
+            cursor: pointer;
+            transition: background-color 0.2s, color 0.2s;
+        }
+
+        .btn-submit {
+            background-color: var(--crema-primary);
+            color: var(--crema-text-on-primary);
+            font-weight: bold;
+        }
+
+        .btn-submit:hover {
+            background-color: var(--crema-accent);
+        }
+
+        .btn-cancel {
+            background-color: var(--crema-border);
+            color: var(--crema-text);
+        }
+
+        .btn-cancel:hover {
+            background-color: var(--crema-primary);
+            color: var(--crema-text-on-primary);
+        }
+
+        .btn:disabled {
+            opacity: 0.6;
+            cursor: not-allowed;
+        }
+
+        .message {
+            padding: 12px 16px;
+            border-radius: 4px;
+            margin-bottom: 16px;
+            text-align: center;
+            font-size: 14px;
+        }
+
+        .message.success {
+            background-color: #d4edda;
+            color: #155724;
+            border: 1px solid #c3e6cb;
+        }
+
+        .message.error {
+            background-color: #f8d7da;
+            color: #721c24;
+            border: 1px solid #f5c6cb;
+        }
+
+        #contact-message {
+            display: none;
+        }
+
+        @media (max-width: 480px) {
+            .contact-container {
+                margin: 16px;
+                padding: 16px;
+            }
+
+            .form-actions {
+                flex-direction: column;
+            }
+        }
+    </style>
+    <script type="module">
+        import { initializeApp } from "https://www.gstatic.com/firebasejs/12.11.0/firebase-app.js";
+        import { getFirestore, addDoc, collection, serverTimestamp } from "https://www.gstatic.com/firebasejs/12.11.0/firebase-firestore.js";
+
+        // Firebase 설정 (platform-CremaMini 동일)
+        const firebaseConfig = {
+            apiKey: "AIzaSyAWrM8lWdoIpaE02ykOy4p6EAkZ3GmQ750",
+            authDomain: "picklayer-net.firebaseapp.com",
+            projectId: "picklayer-net",
+            storageBucket: "picklayer-net.firebasestorage.app",
+            messagingSenderId: "211408708354",
+            appId: "1:211408708354:web:edf682db8b5cb3e859981b"
+        };
+
+        const app = initializeApp(firebaseConfig);
+        const db = getFirestore(app);
+
+        // 언어 감지
+        const currentLang = localStorage.getItem('lang') || 'ko';
+
+        // UI 텍스트
+        const i18n = {
+            ko: {
+                title: '문의하기',
+                nameLabel: '이름',
+                messageLabel: '내용',
+                submit: '보내기',
+                cancel: '취소',
+                success: '문의가 전송되었습니다. 감사합니다!',
+                error: '오류가 발생했습니다. 다시 시도해주세요.',
+                namePlaceholder: '이름을 입력해주세요',
+                messagePlaceholder: '내용을 입력해주세요'
+            },
+            en: {
+                title: 'Contact Us',
+                nameLabel: 'Name',
+                messageLabel: 'Message',
+                submit: 'Send',
+                cancel: 'Cancel',
+                success: 'Your inquiry has been sent. Thank you!',
+                error: 'An error occurred. Please try again.',
+                namePlaceholder: 'Enter your name',
+                messagePlaceholder: 'Enter your message'
+            }
+        };
+
+        const text = i18n[currentLang] || i18n.ko;
+
+        // 페이지 초기화
+        document.addEventListener('DOMContentLoaded', () => {
+            // 페이지 제목 업데이트
+            document.title = text.title + ' - Support Center';
+            document.getElementById('contact-title').textContent = text.title;
+            document.getElementById('name-label').textContent = text.nameLabel;
+            document.getElementById('message-label').textContent = text.messageLabel;
+            document.getElementById('submit-btn').textContent = text.submit;
+            document.getElementById('cancel-btn').textContent = text.cancel;
+
+            // placeholder 설정
+            document.getElementById('name-input').placeholder = text.namePlaceholder;
+            document.getElementById('message-input').placeholder = text.messagePlaceholder;
+
+            // 폼 제출
+            document.getElementById('contact-form').addEventListener('submit', async (e) => {
+                e.preventDefault();
+
+                const name = document.getElementById('name-input').value.trim();
+                const message = document.getElementById('message-input').value.trim();
+
+                if (!name) {
+                    showMessage(text.error, 'error');
+                    return;
+                }
+
+                if (!message) {
+                    showMessage(text.error, 'error');
+                    return;
+                }
+
+                try {
+                    const submitBtn = document.getElementById('submit-btn');
+                    submitBtn.disabled = true;
+
+                    await addDoc(collection(db, 'support_inquiries'), {
+                        name: name,
+                        message: message,
+                        lang: currentLang,
+                        createdAt: serverTimestamp(),
+                        userAgent: navigator.userAgent
+                    });
+
+                    showMessage(text.success, 'success');
+                    document.getElementById('contact-form').reset();
+                    submitBtn.disabled = false;
+                } catch (error) {
+                    console.error('Error submitting form:', error);
+                    showMessage(text.error, 'error');
+                    document.getElementById('submit-btn').disabled = false;
+                }
+            });
+
+            // 취소 버튼
+            document.getElementById('cancel-btn').addEventListener('click', () => {
+                if (history.length > 1) {
+                    history.back();
+                } else {
+                    window.location.href = './';
+                }
+            });
+        });
+
+        function showMessage(msg, type) {
+            const messageEl = document.getElementById('contact-message');
+            messageEl.textContent = msg;
+            messageEl.className = 'message ' + type;
+            messageEl.style.display = 'block';
+
+            if (type === 'success') {
+                setTimeout(() => {
+                    messageEl.style.display = 'none';
+                }, 3000);
+            }
+        }
+    </script>
+</head>
+<body>
+    <nav id="nav">
+        <div class="nav-inner">
+            <h3>Support Center</h3>
+            <div id="lang-switcher">
+                <button class="lang-btn" data-lang="ko">한국어</button>
+                <button class="lang-btn active" data-lang="en">English</button>
+            </div>
+            <button id="menu-toggle" class="menu-toggle">☰</button>
+            <ul id="nav-list"></ul>
+        </div>
+    </nav>
+    <div id="mobile-menu" class="mobile-menu">
+        <ul id="mobile-nav-list"></ul>
+    </div>
+
+    <main>
+        <div class="contact-container">
+            <h1 id="contact-title">문의하기</h1>
+            <div id="contact-message"></div>
+            <form id="contact-form">
+                <div class="form-group">
+                    <label id="name-label" for="name-input">이름</label>
+                    <input type="text" id="name-input" name="name" required>
+                </div>
+                <div class="form-group">
+                    <label id="message-label" for="message-input">내용</label>
+                    <textarea id="message-input" name="message" required></textarea>
+                </div>
+                <div class="form-actions">
+                    <button type="submit" id="submit-btn" class="btn btn-submit">보내기</button>
+                    <button type="button" id="cancel-btn" class="btn btn-cancel">취소</button>
+                </div>
+            </form>
+        </div>
+    </main>
+</body>
+</html>

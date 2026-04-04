@@ -3,5 +3,6 @@
   { "path": "docs/1hour1word/README.en.md", "title": "1Hour1Word" },
   { "path": "docs/subdash/README.en.md", "title": "SubDash" },
   { "path": "docs/stockpulse/README.en.md", "title": "StockPulse" },
-  { "path": "docs/PRIVACY.en.md", "title": "Privacy Policy" }
+  { "path": "docs/PRIVACY.en.md", "title": "Privacy Policy" },
+  { "path": "contact.html", "title": "Contact" }
 ]
