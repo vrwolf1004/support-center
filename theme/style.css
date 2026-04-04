@@ -102,6 +102,68 @@ nav a.active {
     font-weight: bold;
 }
 
+.menu-toggle {
+    display: none;
+    background: none;
+    border: none;
+    font-size: 24px;
+    color: var(--crema-text);
+    cursor: pointer;
+    padding: 0;
+    margin: 0;
+}
+
+.mobile-menu {
+    display: none;
+    position: fixed;
+    top: 60px;
+    right: 0;
+    width: 250px;
+    background-color: var(--crema-surface);
+    border-left: 1px solid var(--crema-border);
+    box-shadow: -4px 4px 12px rgba(44,24,16,0.15);
+    z-index: 99;
+    max-height: calc(100vh - 60px);
+    overflow-y: auto;
+}
+
+.mobile-menu.active {
+    display: block;
+}
+
+.mobile-menu ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+}
+
+.mobile-menu li {
+    margin: 0;
+    border-bottom: 1px solid var(--crema-border);
+}
+
+.mobile-menu a {
+    display: block;
+    padding: 12px 16px;
+    color: var(--crema-text);
+    text-decoration: none;
+    font-size: 14px;
+    transition: background-color 0.2s, color 0.2s;
+}
+
+.mobile-menu a:hover {
+    background-color: var(--crema-primary);
+    color: var(--crema-text-on-primary);
+}
+
+.mobile-menu a.active {
+    background-color: var(--crema-primary);
+    color: var(--crema-text-on-primary);
+    font-weight: bold;
+}
+
 /* ── 메인 콘텐츠 ── */
 main {
     flex: 1;
@@ -220,25 +282,32 @@ main {
     .nav-inner {
         padding: 12px 16px;
         gap: 8px;
-        flex-wrap: wrap;
+        flex-wrap: nowrap;
     }
 
     nav h3 {
         font-size: 16px;
-        order: -1;
-        width: 100%;
+        flex: 1;
     }
 
     #lang-switcher {
-        order: 2;
-        width: 100%;
-        justify-content: flex-start;
+        display: flex;
+        gap: 4px;
+        flex-shrink: 0;
+    }
+
+    .lang-btn {
+        padding: 5px 8px;
+        font-size: 11px;
+    }
+
+    .menu-toggle {
+        display: block;
+        flex-shrink: 0;
     }
 
     nav ul {
-        gap: 4px;
-        width: 100%;
-        order: 3;
+        display: none;
     }
 
     nav a {
@@ -246,9 +315,14 @@ main {
         font-size: 12px;
     }
 
-    .lang-btn {
-        padding: 5px 8px;
-        font-size: 11px;
+    .mobile-menu {
+        top: 56px;
+        width: 280px;
+    }
+
+    .mobile-menu a {
+        padding: 11px 16px;
+        font-size: 13px;
     }
 
     main {
@@ -293,27 +367,34 @@ main {
 /* ── 모바일 (480px 이하) ── */
 @media (max-width: 480px) {
     .nav-inner {
-        padding: 10px 12px;
-        gap: 6px;
-        flex-wrap: wrap;
+        padding: 12px 16px;
+        gap: 8px;
+        flex-wrap: nowrap;
     }
 
     nav h3 {
         font-size: 14px;
-        order: -1;
-        width: 100%;
+        flex: 1;
     }
 
     #lang-switcher {
-        order: 2;
-        width: 100%;
-        justify-content: flex-start;
-        gap: 3px;
+        display: flex;
+        gap: 4px;
+        flex-shrink: 0;
+    }
+
+    .lang-btn {
+        padding: 4px 6px;
+        font-size: 10px;
+    }
+
+    .menu-toggle {
+        display: block;
+        flex-shrink: 0;
     }
 
     nav ul {
-        order: 3;
-        width: 100%;
+        display: none;
     }
 
     nav a {
@@ -321,9 +402,16 @@ main {
         font-size: 10px;
     }
 
-    .lang-btn {
-        padding: 4px 6px;
-        font-size: 10px;
+    .mobile-menu {
+        top: 52px;
+        width: 100%;
+        max-width: none;
+        max-height: calc(100vh - 52px);
+    }
+
+    .mobile-menu a {
+        padding: 10px 16px;
+        font-size: 13px;
     }
 
     main {

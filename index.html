@@ -18,9 +18,13 @@
                 <button class="lang-btn active" data-lang="ko">한국어</button>
                 <button class="lang-btn" data-lang="en">English</button>
             </div>
+            <button id="menu-toggle" class="menu-toggle">☰</button>
             <ul id="nav-list"></ul>
         </div>
     </nav>
+    <div id="mobile-menu" class="mobile-menu">
+        <ul id="mobile-nav-list"></ul>
+    </div>
     <main>
         <div id="content">Loading...</div>
     </main>
@@ -40,6 +44,19 @@
 
         // 현재 언어 상태
         let currentLang = localStorage.getItem('lang') || 'ko';
+
+        // 모바일 메뉴 토글
+        const menuToggle = document.getElementById('menu-toggle');
+        const mobileMenu = document.getElementById('mobile-menu');
+
+        menuToggle.addEventListener('click', () => {
+            mobileMenu.classList.toggle('active');
+        });
+
+        // 모바일 메뉴 닫기
+        function closeMobileMenu() {
+            mobileMenu.classList.remove('active');
+        }
 
         // 언어 전환 버튼 이벤트
         document.querySelectorAll('.lang-btn').forEach(btn => {
@@ -63,7 +80,9 @@
                 const res = await fetch(`pages.${currentLang}.json`);
                 const pages = await res.json();
                 const list = document.getElementById('nav-list');
+                const mobileList = document.getElementById('mobile-nav-list');
                 list.innerHTML = '';
+                mobileList.innerHTML = '';
                 pages.forEach(p => {
                     const li = document.createElement('li');
                     const a = document.createElement('a');
@@ -75,9 +94,20 @@
                         ev.preventDefault();
                         navigateTo(p.path, true);
                         setActiveNav(p.path);
+                        closeMobileMenu();
                     });
                     li.appendChild(a);
                     list.appendChild(li);
+
+                    // 모바일 메뉴에도 같은 항목 추가
+                    const mobileLi = li.cloneNode(true);
+                    mobileLi.querySelector('a').addEventListener('click', (ev) => {
+                        ev.preventDefault();
+                        navigateTo(p.path, true);
+                        setActiveNav(p.path);
+                        closeMobileMenu();
+                    });
+                    mobileList.appendChild(mobileLi);
                 });
                 // initial route
                 const initial = location.hash ? decodeURIComponent(location.hash.slice(1)) : `README${currentLang === 'en' ? '.en' : ''}.md`;
