@@ -61,34 +61,32 @@
 
         // 언어 전환 버튼 이벤트
         document.querySelectorAll('.lang-btn').forEach(btn => {
-            btn.addEventListener('click', () => {
-                currentLang = btn.dataset.lang;
+            btn.addEventListener('click', async () => {
+                const newLang = btn.dataset.lang;
+                if (currentLang === newLang) return; // 같은 언어 선택 시 무시
+
+                currentLang = newLang;
                 localStorage.setItem('lang', currentLang);
                 updateLangUI();
-                loadPages();
+                await loadPages();
+
                 // 현재 페이지를 해당 언어 버전으로 전환
-                switchPageLanguage();
+                if (currentPath) {
+                    let newPath = currentPath;
+                    // ko ↔ en 전환
+                    if (currentPath.endsWith('.en.md')) {
+                        // en → ko
+                        newPath = currentPath.replace('.en.md', '.md');
+                    } else if (currentPath.endsWith('.md')) {
+                        // ko → en
+                        newPath = currentPath.replace('.md', '.en.md');
+                    }
+
+                    navigateTo(newPath, false);
+                    setActiveNav(newPath);
+                }
             });
         });
-
-        // 현재 페이지를 다른 언어 버전으로 전환
-        function switchPageLanguage() {
-            if (!currentPath) return;
-
-            let newPath = currentPath;
-            const oldLang = currentLang === 'en' ? 'ko' : 'en';
-
-            if (oldLang === 'en') {
-                // en → ko: .en.md 제거
-                newPath = currentPath.replace('.en.md', '.md');
-            } else {
-                // ko → en: .md → .en.md
-                newPath = currentPath.replace('.md', '.en.md');
-            }
-
-            navigateTo(newPath, false);
-            setActiveNav(newPath);
-        }
 
         function updateLangUI() {
             document.querySelectorAll('.lang-btn').forEach(btn => {
@@ -142,7 +140,7 @@
         }
 
         function setActiveNav(path) {
-            document.querySelectorAll('#nav-list a').forEach(a => {
+            document.querySelectorAll('#nav-list a, #mobile-nav-list a').forEach(a => {
                 a.classList.toggle('active', a.dataset.path === path);
             });
         }
