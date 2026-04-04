@@ -1,5 +1,6 @@
 [
   { "path": "README.md", "title": "소개" },
-  { "path": "docs/PRIVACY.md", "title": "개인정보 처리방침" },
-  { "path": "docs/stockpulse/README.md", "title": "StockPulse" }
+  { "path": "docs/1hour1word/README.md", "title": "1Hour1Word" },
+  { "path": "docs/stockpulse/README.md", "title": "StockPulse" },
+  { "path": "docs/PRIVACY.md", "title": "개인정보 처리방침" }
 ]
