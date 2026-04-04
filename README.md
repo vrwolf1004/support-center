@@ -11,4 +11,4 @@
 - [개인정보 처리방침](./#docs%2FPRIVACY.md)
 - [문의 및 이슈 접수](https://github.com/vrwolf1004/support-center/issues)
 
-문의처: vrwolf.remote@gmail.com
+문의처: dev.ohyt@gmail.com

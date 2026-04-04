@@ -40,5 +40,5 @@ We do not share collected information with third parties in principle. However, 
 
 For inquiries regarding this privacy policy, please contact us:
 
-- Email: vrwolf.remote@gmail.com
+- Email: dev.ohyt@gmail.com
 - Issues: [GitHub Issues](https://github.com/vrwolf1004/support-center/issues)

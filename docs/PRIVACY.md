@@ -40,6 +40,6 @@ StockPulse는 서비스 제공을 위해 다음 정보를 처리합니다.
 
 개인정보 처리방침에 관한 문의는 아래로 접수해 주세요.
 
-- 이메일: vrwolf.remote@gmail.com
+- 이메일: dev.ohyt@gmail.com
 - 이슈: [GitHub Issues](https://github.com/vrwolf1004/support-center/issues)
 
