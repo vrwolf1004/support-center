@@ -42,8 +42,9 @@
             }
         };
 
-        // 현재 언어 상태
+        // 현재 언어 상태 및 현재 페이지
         let currentLang = localStorage.getItem('lang') || 'ko';
+        let currentPath = null;
 
         // 모바일 메뉴 토글
         const menuToggle = document.getElementById('menu-toggle');
@@ -65,8 +66,29 @@
                 localStorage.setItem('lang', currentLang);
                 updateLangUI();
                 loadPages();
+                // 현재 페이지를 해당 언어 버전으로 전환
+                switchPageLanguage();
             });
         });
+
+        // 현재 페이지를 다른 언어 버전으로 전환
+        function switchPageLanguage() {
+            if (!currentPath) return;
+
+            let newPath = currentPath;
+            const oldLang = currentLang === 'en' ? 'ko' : 'en';
+
+            if (oldLang === 'en') {
+                // en → ko: .en.md 제거
+                newPath = currentPath.replace('.en.md', '.md');
+            } else {
+                // ko → en: .md → .en.md
+                newPath = currentPath.replace('.md', '.en.md');
+            }
+
+            navigateTo(newPath, false);
+            setActiveNav(newPath);
+        }
 
         function updateLangUI() {
             document.querySelectorAll('.lang-btn').forEach(btn => {
@@ -131,6 +153,7 @@
                 if (!res.ok) throw new Error(`Failed to fetch ${path}: ${res.status}`);
                 const md = await res.text();
                 document.getElementById('content').innerHTML = marked.parse(md);
+                currentPath = path; // 현재 페이지 업데이트
                 if (push) history.pushState({path}, '', '#' + encodeURIComponent(path));
             } catch (err) {
                 console.error(err);
