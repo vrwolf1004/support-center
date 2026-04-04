@@ -8,7 +8,8 @@ We provide guidance and help for using our products.
 
 ---
 
-- [Privacy Policy](./#docs%2FPRIVACY.en.md)
-- [Report Issues](https://github.com/vrwolf1004/support-center/issues)
+## Contact & Support
 
-Contact: dev.ohyt@gmail.com
+- **Email**: dev.ohyt@gmail.com
+- [GitHub Issues](https://github.com/vrwolf1004/support-center/issues) (GitHub account required)
+- [Privacy Policy](./#docs%2FPRIVACY.en.md)
