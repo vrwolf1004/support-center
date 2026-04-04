@@ -219,7 +219,7 @@ main {
 @media (max-width: 768px) {
     .nav-inner {
         padding: 12px 16px;
-        gap: 16px;
+        gap: 8px;
         flex-wrap: wrap;
     }
 
@@ -229,14 +229,26 @@ main {
         width: 100%;
     }
 
+    #lang-switcher {
+        order: 2;
+        width: 100%;
+        justify-content: flex-start;
+    }
+
     nav ul {
         gap: 4px;
         width: 100%;
+        order: 3;
     }
 
     nav a {
         padding: 6px 10px;
         font-size: 12px;
+    }
+
+    .lang-btn {
+        padding: 5px 8px;
+        font-size: 11px;
     }
 
     main {
@@ -282,16 +294,36 @@ main {
 @media (max-width: 480px) {
     .nav-inner {
         padding: 10px 12px;
-        gap: 8px;
+        gap: 6px;
+        flex-wrap: wrap;
     }
 
     nav h3 {
         font-size: 14px;
+        order: -1;
+        width: 100%;
+    }
+
+    #lang-switcher {
+        order: 2;
+        width: 100%;
+        justify-content: flex-start;
+        gap: 3px;
+    }
+
+    nav ul {
+        order: 3;
+        width: 100%;
     }
 
     nav a {
-        padding: 6px 8px;
-        font-size: 11px;
+        padding: 5px 6px;
+        font-size: 10px;
+    }
+
+    .lang-btn {
+        padding: 4px 6px;
+        font-size: 10px;
     }
 
     main {
