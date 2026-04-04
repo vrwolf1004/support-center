@@ -3,6 +3,5 @@
   { "path": "docs/1hour1word/README.md", "title": "1Hour1Word" },
   { "path": "docs/subdash/README.md", "title": "SubDash" },
   { "path": "docs/stockpulse/README.md", "title": "StockPulse" },
-  { "path": "docs/PRIVACY.md", "title": "개인정보 처리방침" },
-  { "path": "contact.html", "title": "문의하기" }
+  { "path": "docs/PRIVACY.md", "title": "개인정보 처리방침" }
 ]
