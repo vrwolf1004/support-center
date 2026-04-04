@@ -34,6 +34,7 @@ nav h3 {
     border: none;
     white-space: nowrap;
     font-weight: bold;
+    order: 1;
 }
 
 nav ul {
@@ -44,6 +45,7 @@ nav ul {
     gap: 4px;
     flex-wrap: wrap;
     align-items: center;
+    order: 4;
 }
 
 nav li {
@@ -76,6 +78,7 @@ nav a.active {
     display: flex;
     gap: 4px;
     margin-left: auto;
+    order: 2;
 }
 
 .lang-btn {
@@ -111,6 +114,7 @@ nav a.active {
     cursor: pointer;
     padding: 0;
     margin: 0;
+    order: 3;
 }
 
 .mobile-menu {
@@ -282,7 +286,6 @@ main {
     .nav-inner {
         padding: 12px 16px;
         gap: 8px;
-        flex-wrap: nowrap;
     }
 
     nav h3 {
@@ -291,8 +294,7 @@ main {
     }
 
     #lang-switcher {
-        display: flex;
-        gap: 4px;
+        order: 2;
         flex-shrink: 0;
     }
 
@@ -303,11 +305,12 @@ main {
 
     .menu-toggle {
         display: block;
+        order: 3;
         flex-shrink: 0;
     }
 
     nav ul {
-        display: none;
+        display: none !important;
     }
 
     nav a {
@@ -316,8 +319,11 @@ main {
     }
 
     .mobile-menu {
-        top: 56px;
         width: 280px;
+    }
+
+    .mobile-menu.active {
+        display: block;
     }
 
     .mobile-menu a {
@@ -368,8 +374,7 @@ main {
 @media (max-width: 480px) {
     .nav-inner {
         padding: 12px 16px;
-        gap: 8px;
-        flex-wrap: nowrap;
+        gap: 6px;
     }
 
     nav h3 {
@@ -378,8 +383,7 @@ main {
     }
 
     #lang-switcher {
-        display: flex;
-        gap: 4px;
+        order: 2;
         flex-shrink: 0;
     }
 
@@ -390,11 +394,12 @@ main {
 
     .menu-toggle {
         display: block;
+        order: 3;
         flex-shrink: 0;
     }
 
     nav ul {
-        display: none;
+        display: none !important;
     }
 
     nav a {
@@ -403,10 +408,13 @@ main {
     }
 
     .mobile-menu {
-        top: 52px;
         width: 100%;
         max-width: none;
-        max-height: calc(100vh - 52px);
+        right: 0;
+    }
+
+    .mobile-menu.active {
+        display: block;
     }
 
     .mobile-menu a {
