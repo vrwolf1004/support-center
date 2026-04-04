@@ -15,8 +15,8 @@
         <div class="nav-inner">
             <h3>Support Center</h3>
             <div id="lang-switcher">
-                <button class="lang-btn active" data-lang="ko">한국어</button>
-                <button class="lang-btn" data-lang="en">English</button>
+                <button class="lang-btn" data-lang="ko">한국어</button>
+                <button class="lang-btn active" data-lang="en">English</button>
             </div>
             <button id="menu-toggle" class="menu-toggle">☰</button>
             <ul id="nav-list"></ul>
@@ -43,7 +43,8 @@
         };
 
         // 현재 언어 상태 및 현재 페이지
-        let currentLang = localStorage.getItem('lang') || 'ko';
+        // 첫 방문: 영어(en), 이후 방문: localStorage에서 저장된 언어
+        let currentLang = localStorage.getItem('lang') || 'en';
         let currentPath = null;
 
         // 모바일 메뉴 토글
