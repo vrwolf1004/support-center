@@ -72,6 +72,36 @@ nav a.active {
     font-weight: bold;
 }
 
+#lang-switcher {
+    display: flex;
+    gap: 4px;
+    margin-left: auto;
+}
+
+.lang-btn {
+    padding: 6px 10px;
+    border: 1px solid var(--crema-border);
+    border-radius: var(--crema-radius-sm);
+    background-color: var(--crema-surface);
+    color: var(--crema-text);
+    cursor: pointer;
+    font-size: 12px;
+    font-family: var(--crema-font);
+    transition: background-color 0.2s, color 0.2s;
+    white-space: nowrap;
+}
+
+.lang-btn:hover {
+    background-color: var(--crema-accent);
+    color: var(--crema-text-on-accent);
+}
+
+.lang-btn.active {
+    background-color: var(--crema-primary);
+    color: var(--crema-text-on-primary);
+    font-weight: bold;
+}
+
 /* ── 메인 콘텐츠 ── */
 main {
     flex: 1;

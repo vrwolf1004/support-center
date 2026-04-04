@@ -14,6 +14,10 @@
     <nav id="nav">
         <div class="nav-inner">
             <h3>Support Center</h3>
+            <div id="lang-switcher">
+                <button class="lang-btn active" data-lang="ko">한국어</button>
+                <button class="lang-btn" data-lang="en">English</button>
+            </div>
             <ul id="nav-list"></ul>
         </div>
     </nav>
@@ -22,12 +26,44 @@
     </main>
 
     <script>
+        // 다국어 메시지
+        const i18nMessages = {
+            ko: {
+                loadFail: '문서 목록을 불러오지 못했습니다.',
+                docFail: '문서를 불러오지 못했습니다.'
+            },
+            en: {
+                loadFail: 'Failed to load page list.',
+                docFail: 'Failed to load document.'
+            }
+        };
+
+        // 현재 언어 상태
+        let currentLang = localStorage.getItem('lang') || 'ko';
+
+        // 언어 전환 버튼 이벤트
+        document.querySelectorAll('.lang-btn').forEach(btn => {
+            btn.addEventListener('click', () => {
+                currentLang = btn.dataset.lang;
+                localStorage.setItem('lang', currentLang);
+                updateLangUI();
+                loadPages();
+            });
+        });
+
+        function updateLangUI() {
+            document.querySelectorAll('.lang-btn').forEach(btn => {
+                btn.classList.toggle('active', btn.dataset.lang === currentLang);
+            });
+        }
+
         // 페이지 목록 로드
         async function loadPages() {
             try {
-                const res = await fetch('pages.json');
+                const res = await fetch(`pages.${currentLang}.json`);
                 const pages = await res.json();
                 const list = document.getElementById('nav-list');
+                list.innerHTML = '';
                 pages.forEach(p => {
                     const li = document.createElement('li');
                     const a = document.createElement('a');
@@ -44,12 +80,12 @@
                     list.appendChild(li);
                 });
                 // initial route
-                const initial = location.hash ? decodeURIComponent(location.hash.slice(1)) : 'README.md';
+                const initial = location.hash ? decodeURIComponent(location.hash.slice(1)) : `README${currentLang === 'en' ? '.en' : ''}.md`;
                 navigateTo(initial, false);
                 setActiveNav(initial);
             } catch (err) {
-                console.error('Failed to load pages.json', err);
-                document.getElementById('content').textContent = '문서 목록을 불러오지 못했습니다.';
+                console.error('Failed to load pages json', err);
+                document.getElementById('content').textContent = i18nMessages[currentLang].loadFail;
             }
         }
 
@@ -68,7 +104,7 @@
                 if (push) history.pushState({path}, '', '#' + encodeURIComponent(path));
             } catch (err) {
                 console.error(err);
-                document.getElementById('content').textContent = '문서를 불러오지 못했습니다.';
+                document.getElementById('content').textContent = i18nMessages[currentLang].docFail;
             }
         }
 
