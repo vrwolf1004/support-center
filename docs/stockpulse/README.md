@@ -4,8 +4,8 @@
 
 ## 설치
 
-1. [Chrome 웹 스토어](#)에서 "StockPulse"를 검색합니다.
-2. **Chrome에 추가**를 클릭합니다.
+1. Chrome 웹 스토어에서 "StockPulse"를 검색합니다.
+2. Chrome에 추가를 클릭합니다.
 3. 툴바에 StockPulse 아이콘이 나타나면 설치 완료입니다.
 
 ## 사용법
