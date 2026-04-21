@@ -13,7 +13,7 @@
 <body>
     <nav id="nav">
         <div class="nav-inner">
-            <h3>Support Center</h3>
+            <h3><a href="#" id="logo">Support Center</a></h3>
             <div id="lang-switcher">
                 <button class="lang-btn" data-lang="ko">한국어</button>
                 <button class="lang-btn active" data-lang="en">English</button>
@@ -59,6 +59,15 @@
         function closeMobileMenu() {
             mobileMenu.classList.remove('active');
         }
+
+        // 로고 클릭 이벤트 - 홈페이지로 이동
+        document.getElementById('logo').addEventListener('click', (e) => {
+            e.preventDefault();
+            const homePath = currentLang === 'en' ? 'README.en.md' : 'README.md';
+            navigateTo(homePath, true);
+            setActiveNav(homePath);
+            closeMobileMenu();
+        });
 
         // 언어 전환 버튼 이벤트
         document.querySelectorAll('.lang-btn').forEach(btn => {
