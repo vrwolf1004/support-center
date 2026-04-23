@@ -39,7 +39,7 @@ A Chrome extension that automatically checks stock prices of your interest and s
 ## Privacy Protection
 
 StockPulse protects your portfolio data securely.
-For details, see [Privacy Policy](./#docs%2Fstockpulse%2FPRIVACY.en.md).
+For details, see [Privacy Policy](./privacy.html).
 
 ---
 
