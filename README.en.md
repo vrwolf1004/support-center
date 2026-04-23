@@ -15,4 +15,4 @@ We provide guidance and help for using our products.
 <!-- - **[Contact Us](contact.html)** — Submit inquiry via form (recommended) -->
 - **Email**: dev.ohyt@gmail.com
 - [GitHub Issues](https://github.com/vrwolf1004/support-center/issues) (GitHub account required)
-- [Privacy Policy](./#docs%2FPRIVACY.en.md)
+- [Privacy Policy](/docs/PRIVACY.html)
