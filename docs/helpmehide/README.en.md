@@ -66,6 +66,11 @@ A Chrome extension that encrypts selected text with a PIN to hide it securely.
 - Chrome extensions update automatically.
 - Manual: `chrome://extensions` → Click **Update**
 
+## Privacy Protection
+
+Help Me Hide only stores PIN and settings locally.
+For details, see [Privacy Policy](./PRIVACY.en.md).
+
 ---
 
 Questions: Please submit via [Issues](https://github.com/vrwolf1004/support-center/issues).

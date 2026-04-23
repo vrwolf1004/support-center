@@ -58,6 +58,11 @@ A Chrome extension that visually manages your monthly subscription service costs
 - Chrome extensions update automatically.
 - Manual: `chrome://extensions` → Click **Update**
 
+## Privacy Protection
+
+SubDash manages your subscription data securely.
+For details, see [Privacy Policy](./PRIVACY.en.md).
+
 ---
 
 Questions: Please submit via [Issues](https://github.com/vrwolf1004/support-center/issues).

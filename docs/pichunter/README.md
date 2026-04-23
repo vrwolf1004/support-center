@@ -65,6 +65,11 @@
 - Chrome 확장 프로그램은 자동으로 업데이트됩니다.
 - 수동: `chrome://extensions` → **업데이트** 클릭
 
+## 개인정보 보호
+
+PicHunter는 스캔 이력과 설정만 저장합니다.
+자세한 내용은 [개인정보 처리방침](./PRIVACY.md)을 참고하세요.
+
 ---
 
 문의: [Issues](https://github.com/vrwolf1004/support-center/issues)로 접수하세요.

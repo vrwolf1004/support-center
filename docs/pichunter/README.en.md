@@ -65,6 +65,11 @@ A Chrome extension that scans webpages for images and helps you download them ea
 - Chrome extensions update automatically.
 - Manual: `chrome://extensions` → Click **Update**
 
+## Privacy Protection
+
+PicHunter only stores scan history and settings.
+For details, see [Privacy Policy](./PRIVACY.en.md).
+
 ---
 
 Questions: Please submit via [Issues](https://github.com/vrwolf1004/support-center/issues).
