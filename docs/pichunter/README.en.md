@@ -68,7 +68,7 @@ A Chrome extension that scans webpages for images and helps you download them ea
 ## Privacy Protection
 
 PicHunter only stores scan history and settings.
-For details, see [Privacy Policy](#docs%2Fpichunter%2FPRIVACY.en.md).
+For details, see [Privacy Policy](./#docs%2Fpichunter%2FPRIVACY.en.md).
 
 ---
 
