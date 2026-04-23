@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Help Me Hide 개인정보 처리방침</title>
+    <link rel="stylesheet" href="../../theme/artnouveau.css">
+    <link rel="stylesheet" href="../../theme/style.css">
+    <style>
+        .privacy-container { max-width: 900px; margin: 32px auto; padding: 24px; background-color: var(--crema-surface); border-radius: var(--crema-radius-md); box-shadow: var(--crema-shadow); }
+        .privacy-container h1 { color: var(--crema-primary); margin-bottom: 8px; border-bottom: 1px solid var(--crema-border); padding-bottom: 16px; }
+        .last-updated { color: var(--crema-text-muted); font-size: 13px; margin-bottom: 24px; }
+        .privacy-container h2 { color: var(--crema-primary); margin-top: 32px; margin-bottom: 16px; font-size: 20px; }
+        .privacy-container h3 { color: var(--crema-text); margin-top: 20px; margin-bottom: 12px; font-size: 16px; }
+        .privacy-container p { line-height: 1.6; margin-bottom: 12px; color: var(--crema-text); }
+        .privacy-container ul, .privacy-container ol { margin-left: 20px; margin-bottom: 12px; }
+        .privacy-container li { margin-bottom: 8px; color: var(--crema-text); }
+        .privacy-container table { width: 100%; border-collapse: collapse; margin: 16px 0; }
+        .privacy-container table th, .privacy-container table td { border: 1px solid var(--crema-border); padding: 12px; text-align: left; color: var(--crema-text); }
+        .privacy-container table th { background-color: var(--crema-primary); color: var(--crema-text-on-primary); font-weight: bold; }
+        .privacy-container table tr:nth-child(even) { background-color: rgba(45, 106, 79, 0.05); }
+        .contact-info { background-color: rgba(45, 106, 79, 0.1); border-left: 4px solid var(--crema-primary); padding: 16px; margin: 24px 0; border-radius: 4px; }
+        .contact-info a { color: var(--crema-primary); text-decoration: none; }
+        .contact-info a:hover { text-decoration: underline; }
+        @media (max-width: 768px) { .privacy-container { margin: 16px; padding: 16px; } .privacy-container table { font-size: 13px; } .privacy-container table th, .privacy-container table td { padding: 8px; } }
+    </style>
+</head>
+<body>
+    <nav id="nav">
+        <div class="nav-inner">
+            <h3><a href="../../" id="logo" style="color: inherit; text-decoration: none; cursor: pointer;">Support Center</a></h3>
+            <div id="lang-switcher">
+                <button class="lang-btn" data-lang="ko">한국어</button>
+                <button class="lang-btn active" data-lang="en">English</button>
+            </div>
+            <button id="menu-toggle" class="menu-toggle">☰</button>
+            <ul id="nav-list"></ul>
+        </div>
+    </nav>
+    <div id="mobile-menu" class="mobile-menu">
+        <ul id="mobile-nav-list"></ul>
+    </div>
+
+    <main>
+        <div class="privacy-container">
+            <h1 id="title">Help Me Hide 개인정보 처리방침</h1>
+            <div class="last-updated" id="updated">최종 수정일: 2026-04-23</div>
+
+            <h2 id="h-collect">1. 수집하는 정보</h2>
+            <p id="p-collect">Help Me Hide는 서비스 제공을 위해 다음 정보를 처리합니다.</p>
+            <table id="table-collect"></table>
+            <ul id="list-collect"></ul>
+
+            <h2 id="h-purpose">2. 정보의 이용 목적</h2>
+            <ul id="list-purpose"></ul>
+
+            <h2 id="h-sharing">3. 정보의 제3자 제공</h2>
+            <p id="p-sharing">수집된 정보는 원칙적으로 제3자에게 제공하지 않습니다. 다만 아래의 경우 예외로 합니다.</p>
+            <ul id="list-exceptions"></ul>
+
+            <h2 id="h-retention">4. 정보의 보관 및 파기</h2>
+            <ul id="list-retention"></ul>
+
+            <h2 id="h-rights">5. 사용자의 권리</h2>
+            <ul id="list-rights"></ul>
+
+            <h2 id="h-security">6. 보안</h2>
+            <ul id="list-security"></ul>
+
+            <h2 id="h-technical">7. 기술 정보</h2>
+            <p id="p-technical-encryption"><strong id="encryption-label">암호화 방식</strong>:</p>
+            <ul id="list-encryption"></ul>
+            <p id="p-technical-storage"><strong id="storage-label">저장 메커니즘</strong>:</p>
+            <ul id="list-storage"></ul>
+            <p id="p-technical-communication"><strong id="communication-label">외부 통신</strong>:</p>
+            <ul id="list-communication"></ul>
+
+            <h2 id="h-contact">8. 문의</h2>
+            <div class="contact-info">
+                <p id="p-contact">개인정보 처리방침에 관한 문의는 아래로 접수해 주세요.</p>
+                <ul id="list-contact"></ul>
+            </div>
+        </div>
+    </main>
+
+    <script>
+        const i18n = {
+            ko: {
+                title: 'Help Me Hide 개인정보 처리방침',
+                updated: '최종 수정일: 2026-04-23',
+                h_collect: '1. 수집하는 정보',
+                p_collect: 'Help Me Hide는 서비스 제공을 위해 다음 정보를 처리합니다.',
+                table_headers: ['구분', '항목', '목적', '저장 위치'],
+                table_rows: [
+                    ['사용자 입력', 'PIN 코드, 파일/폴더 경로', '보안 잠금 및 숨김 관리', '사용자 기기'],
+                    ['자동 수집', '파일 메타데이터 (크기, 수정 시간)', '파일 관리', '사용자 기기'],
+                    ['자동 수집', '오류 로그', '안정성 개선', '사용자 기기']
+                ],
+                list_collect: [
+                    '개인 식별 정보(이름, 이메일, 계정 정보 등)는 수집하지 않습니다.',
+                    '파일 내용 데이터는 사용자 기기에만 저장되며, 외부로 전송되지 않습니다.',
+                    'PIN 코드는 암호화되어 로컬에만 저장됩니다.'
+                ],
+                h_purpose: '2. 정보의 이용 목적',
+                list_purpose: [
+                    '파일/폴더를 PIN으로 보호하여 숨김 처리',
+                    'AES-GCM 암호화를 통한 파일 내용 보호',
+                    '사용자 기기에서만 암호화된 파일 관리',
+                    '서비스 오류 진단 및 안정성 개선'
+                ],
+                h_sharing: '3. 정보의 제3자 제공',
+                p_sharing: '수집된 정보는 원칙적으로 제3자에게 제공하지 않습니다. 다만 아래의 경우 예외로 합니다.',
+                list_exceptions: [
+                    '법령에 따른 요청이 있는 경우',
+                    '사용자의 명시적 동의가 있는 경우'
+                ],
+                h_retention: '4. 정보의 보관 및 파기',
+                list_retention: [
+                    '로컬 저장소: 사용자가 확장을 삭제할 때까지 기기에 보관',
+                    '암호화된 파일: 사용자가 삭제할 때까지 보관',
+                    '자동 파기: 확장 프로그램 삭제 시 저장된 모든 데이터 및 암호화된 파일 자동 삭제'
+                ],
+                h_rights: '5. 사용자의 권리',
+                list_rights: [
+                    '언제든지 확장 삭제: 확장을 제거하면 모든 데이터가 자동으로 삭제됩니다',
+                    '파일 관리: 숨겨진 파일 언제든지 복구 또는 삭제 가능',
+                    'PIN 변경: 사용자 설정에서 PIN 코드 변경 가능'
+                ],
+                h_security: '6. 보안',
+                list_security: [
+                    'Chrome 확장의 sandbox 환경으로 보호됨',
+                    'AES-GCM 256비트 암호화로 파일 내용 보호',
+                    'PIN 코드 해시 함수로 저장',
+                    '모든 데이터는 사용자 기기 로컬에만 저장'
+                ],
+                h_technical: '7. 기술 정보',
+                p_technical_encryption: '암호화 방식',
+                list_encryption: [
+                    'AES-GCM (256-bit): 파일 내용 암호화',
+                    'PBKDF2: PIN 코드에서 암호화 키 생성',
+                    'SHA-256: PIN 검증용 해시'
+                ],
+                p_technical_storage: '저장 메커니즘',
+                list_storage: [
+                    'Chrome Storage: PIN 해시, 파일 목록',
+                    'IndexedDB: 암호화된 파일 블럽 (Blob) 데이터'
+                ],
+                p_technical_communication: '외부 통신',
+                list_communication: [
+                    '없음 (모든 데이터 로컬 처리)'
+                ],
+                h_contact: '8. 문의',
+                p_contact: '개인정보 처리방침에 관한 문의는 아래로 접수해 주세요.',
+                list_contact: [
+                    '📧 이메일: dev.ohyt@gmail.com',
+                    '🐛 이슈: <a href="https://github.com/vrwolf1004/support-center/issues" target="_blank">GitHub Issues</a>'
+                ]
+            },
+            en: {
+                title: 'Help Me Hide Privacy Policy',
+                updated: 'Last Updated: 2026-04-23',
+                h_collect: '1. Information We Collect',
+                p_collect: 'Help Me Hide processes the following information to provide the service.',
+                table_headers: ['Category', 'Items', 'Purpose', 'Storage Location'],
+                table_rows: [
+                    ['User-provided', 'PIN code, file/folder paths', 'Security lock and hide management', "User's device"],
+                    ['Auto-collected', 'File metadata (size, modification time)', 'File management', "User's device"],
+                    ['Auto-collected', 'Error logs', 'Improve stability', "User's device"]
+                ],
+                list_collect: [
+                    'We do not collect personally identifiable information (name, email, account information, etc.).',
+                    'File content data is stored only on the user\'s device and not transmitted externally.',
+                    'PIN code is encrypted and stored locally only.'
+                ],
+                h_purpose: '2. Purposes of Information Use',
+                list_purpose: [
+                    'Protect files/folders with PIN and hide them',
+                    'Protect file contents through AES-GCM encryption',
+                    'Manage encrypted files only on user\'s device',
+                    'Service error diagnosis and stability improvement'
+                ],
+                h_sharing: '3. Third-Party Data Sharing',
+                p_sharing: 'Collected information is not provided to third parties in principle. Exceptions include:',
+                list_exceptions: [
+                    'Legal requests as required by law',
+                    'Explicit user consent'
+                ],
+                h_retention: '4. Data Retention and Deletion',
+                list_retention: [
+                    'Local Storage: Retained on device until user uninstalls the extension',
+                    'Encrypted Files: Retained until user deletes them',
+                    'Automatic Deletion: All data and encrypted files are automatically deleted when the extension is removed'
+                ],
+                h_rights: '5. User Rights',
+                list_rights: [
+                    'Uninstall at Any Time: Removing the extension automatically deletes all data',
+                    'File Management: Recover or delete hidden files at any time',
+                    'Change PIN: Modify PIN code through settings'
+                ],
+                h_security: '6. Security',
+                list_security: [
+                    'Protected by Chrome extension\'s sandbox environment',
+                    'AES-GCM 256-bit encryption protects file contents',
+                    'PIN code stored as hash function',
+                    'All data stored locally only on user\'s device'
+                ],
+                h_technical: '7. Technical Information',
+                p_technical_encryption: 'Encryption Methods',
+                list_encryption: [
+                    'AES-GCM (256-bit): File content encryption',
+                    'PBKDF2: Derive encryption key from PIN code',
+                    'SHA-256: PIN verification hash'
+                ],
+                p_technical_storage: 'Storage Mechanisms',
+                list_storage: [
+                    'Chrome Storage: PIN hash, file list',
+                    'IndexedDB: Encrypted file blob data'
+                ],
+                p_technical_communication: 'External Communication',
+                list_communication: [
+                    'None (all data processed locally)'
+                ],
+                h_contact: '8. Contact',
+                p_contact: 'If you have questions about this Privacy Policy, please contact us:',
+                list_contact: [
+                    '📧 Email: dev.ohyt@gmail.com',
+                    '🐛 Issues: <a href="https://github.com/vrwolf1004/support-center/issues" target="_blank">GitHub Issues</a>'
+                ]
+            }
+        };
+
+        const currentLang = localStorage.getItem('lang') || 'en';
+        const text = i18n[currentLang] || i18n.ko;
+
+        document.addEventListener('DOMContentLoaded', () => {
+            document.title = text.title + ' - Support Center';
+            document.getElementById('title').textContent = text.title;
+            document.getElementById('updated').textContent = text.updated;
+            document.getElementById('h-collect').textContent = text.h_collect;
+            document.getElementById('p-collect').textContent = text.p_collect;
+            document.getElementById('h-purpose').textContent = text.h_purpose;
+            document.getElementById('h-sharing').textContent = text.h_sharing;
+            document.getElementById('p-sharing').textContent = text.p_sharing;
+            document.getElementById('h-retention').textContent = text.h_retention;
+            document.getElementById('h-rights').textContent = text.h_rights;
+            document.getElementById('h-security').textContent = text.h_security;
+            document.getElementById('h-technical').textContent = text.h_technical;
+            document.getElementById('encryption-label').textContent = text.p_technical_encryption;
+            document.getElementById('storage-label').textContent = text.p_technical_storage;
+            document.getElementById('communication-label').textContent = text.p_technical_communication;
+            document.getElementById('h-contact').textContent = text.h_contact;
+            document.getElementById('p-contact').textContent = text.p_contact;
+
+            const tableHtml = `<tr>${text.table_headers.map(h => `<th>${h}</th>`).join('')}</tr>${text.table_rows.map(row => `<tr>${row.map(cell => `<td>${cell}</td>`).join('')}</tr>`).join('')}`;
+            document.getElementById('table-collect').innerHTML = tableHtml;
+            document.getElementById('list-collect').innerHTML = text.list_collect.map(item => `<li>${item}</li>`).join('');
+            document.getElementById('list-purpose').innerHTML = text.list_purpose.map(item => `<li>${item}</li>`).join('');
+            document.getElementById('list-exceptions').innerHTML = text.list_exceptions.map(item => `<li>${item}</li>`).join('');
+            document.getElementById('list-retention').innerHTML = text.list_retention.map(item => `<li>${item}</li>`).join('');
+            document.getElementById('list-rights').innerHTML = text.list_rights.map(item => `<li>${item}</li>`).join('');
+            document.getElementById('list-security').innerHTML = text.list_security.map(item => `<li>${item}</li>`).join('');
+            document.getElementById('list-encryption').innerHTML = text.list_encryption.map(item => `<li>${item}</li>`).join('');
+            document.getElementById('list-storage').innerHTML = text.list_storage.map(item => `<li>${item}</li>`).join('');
+            document.getElementById('list-communication').innerHTML = text.list_communication.map(item => `<li>${item}</li>`).join('');
+            document.getElementById('list-contact').innerHTML = text.list_contact.map(item => `<li>${item}</li>`).join('');
+
+            document.querySelectorAll('.lang-btn').forEach(btn => {
+                btn.classList.toggle('active', btn.dataset.lang === currentLang);
+                btn.addEventListener('click', () => {
+                    if (btn.dataset.lang !== currentLang) {
+                        localStorage.setItem('lang', btn.dataset.lang);
+                        location.reload();
+                    }
+                });
+            });
+
+            document.getElementById('logo').addEventListener('click', () => {
+                window.location.href = '../../';
+            });
+        });
+    </script>
+</body>
+</html>
