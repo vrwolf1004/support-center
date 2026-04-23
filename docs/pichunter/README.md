@@ -68,7 +68,7 @@
 ## 개인정보 보호
 
 PicHunter는 스캔 이력과 설정만 저장합니다.
-자세한 내용은 [개인정보 처리방침](./privacy.html)을 참고하세요.
+자세한 내용은 [개인정보 처리방침](/docs/pichunter/privacy.html)을 참고하세요.
 
 ---
 

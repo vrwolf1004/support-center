@@ -41,7 +41,7 @@ Click the **⚙️ Settings** button at the bottom of the popup to open options.
 ## Privacy Protection
 
 1Hour1Word collects minimal personal information.
-For details, see [Privacy Policy](./privacy.html).
+For details, see [Privacy Policy](/docs/1hour1word/privacy.html).
 
 ---
 

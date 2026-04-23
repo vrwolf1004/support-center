@@ -61,7 +61,7 @@ A Chrome extension that visually manages your monthly subscription service costs
 ## Privacy Protection
 
 SubDash manages your subscription data securely.
-For details, see [Privacy Policy](./privacy.html).
+For details, see [Privacy Policy](/docs/subdash/privacy.html).
 
 ---
 
