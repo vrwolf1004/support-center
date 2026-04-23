@@ -69,7 +69,7 @@
 ## 개인정보 보호
 
 Help Me Hide는 PIN과 설정만 로컬에 저장합니다.
-자세한 내용은 [개인정보 처리방침](./#docs%2Fhelpmehide%2FPRIVACY.md)을 참고하세요.
+자세한 내용은 [개인정보 처리방침](#docs%2Fhelpmehide%2FPRIVACY.md)을 참고하세요.
 
 ---
 

@@ -41,7 +41,7 @@
 ## 개인정보 보호
 
 1Hour1Word는 개인정보를 최소한으로 수집합니다.
-자세한 내용은 [개인정보 처리방침](./#docs%2F1hour1word%2FPRIVACY.md)을 참고하세요.
+자세한 내용은 [개인정보 처리방침](#docs%2F1hour1word%2FPRIVACY.md)을 참고하세요.
 
 ---
 

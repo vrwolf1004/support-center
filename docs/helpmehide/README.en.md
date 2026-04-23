@@ -69,7 +69,7 @@ A Chrome extension that encrypts selected text with a PIN to hide it securely.
 ## Privacy Protection
 
 Help Me Hide only stores PIN and settings locally.
-For details, see [Privacy Policy](./#docs%2Fhelpmehide%2FPRIVACY.en.md).
+For details, see [Privacy Policy](#docs%2Fhelpmehide%2FPRIVACY.en.md).
 
 ---
 
