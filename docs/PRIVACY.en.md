@@ -1,44 +1,94 @@
-# StockPulse Privacy Policy
+# Support Center Privacy Policy
 
-Last Updated: 2026-03-24
+Last Updated: 2026-04-23
 
-## 1. Information We Collect
+## 1. Overview
 
-StockPulse processes the following information to provide the service.
+Chrome extensions provided by Support Center collect minimal personal information and store it only on the user's device.
+Since each extension collects different information, please refer to the **Extension-Specific Privacy Policies** below for details.
 
-| Category | Items | Purpose | Retention Period |
-|----------|-------|---------|-----------------|
-| Auto-Collected | App version, error logs | Error diagnosis and stability improvement | 90 days from collection |
-| Optional | Usage statistics (feature usage frequency) | Service improvement | 1 year from collection |
+## 2. Common Principles
 
-- We do not collect personally identifiable information (name, email, account information, etc.).
-- Financial data (stock holdings, portfolio, etc.) is stored only on the user's device and not transmitted externally.
+All Support Center extensions follow these principles:
 
-## 2. Purpose of Information Use
+### 2.1 No Collection of Personally Identifiable Information
+- We do not collect names, emails, account information, etc.
+- We do not track or identify users
 
-- Error diagnosis and stability improvement of the service
-- Feature improvement and enhanced user experience
+### 2.2 Local Storage Priority
+- All collected data is stored **only on the user's device**
+- We do not transmit personal data to external servers
 
-## 3. Sharing Information with Third Parties
+### 2.3 User Control
+- Removing the extension automatically deletes all stored data
+- Users can control stored data at any time
 
-We do not share collected information with third parties in principle. However, there are exceptions in the following cases:
+### 2.4 Minimal External API Usage
+- External APIs are used only when necessary for functionality
+- Personal information is not included in API calls
 
-- When required by law
-- When there is explicit user consent
+### 2.5 Transparency
+- We publicly disclose each extension's privacy policy
+- Users are notified when policies change
 
-## 4. Information Storage and Deletion
+## 3. Extension-Specific Privacy Policies
 
-- Information past its retention period will be deleted without delay.
-- When users uninstall the extension, all data stored on their device is automatically deleted.
+Refer to the following for specific information collection and processing methods for each extension:
+
+| Extension | Korean | English |
+|-----------|--------|---------|
+| **1Hour1Word** | [개인정보 처리방침](./1hour1word/PRIVACY.md) | [Privacy Policy](./1hour1word/PRIVACY.en.md) |
+| **SubDash** | [개인정보 처리방침](./subdash/PRIVACY.md) | [Privacy Policy](./subdash/PRIVACY.en.md) |
+| **StockPulse** | [개인정보 처리방침](./stockpulse/PRIVACY.md) | [Privacy Policy](./stockpulse/PRIVACY.en.md) |
+| **PicHunter** | [개인정보 처리방침](./pichunter/PRIVACY.md) | [Privacy Policy](./pichunter/PRIVACY.en.md) |
+| **Help Me Hide** | [개인정보 처리방침](./helpmehide/PRIVACY.md) | [Privacy Policy](./helpmehide/PRIVACY.en.md) |
+
+## 4. Data Retention and Deletion
+
+- **Retention**: Data is retained on the device while the extension is in use
+- **Deletion**: All data is automatically deleted when the extension is removed
+- **Extension Updates**: No data loss during updates
 
 ## 5. User Rights
 
-- Users can stop data collection at any time by uninstalling the extension.
-- Users can request access, correction, or deletion of collected information.
+### 5.1 Remove Extensions Anytime
+- Settings → Extensions → Remove
 
-## 6. Contact
+### 5.2 Data Access and Deletion
+- Since extensions store data locally, users manage it directly
+- Clear Chrome storage to remove all data
 
-For inquiries regarding this privacy policy, please contact us:
+### 5.3 Control Settings
+- Each extension's settings allow users to control data collection scope
 
-- Email: dev.ohyt@gmail.com
-- Issues: [GitHub Issues](https://github.com/vrwolf1004/support-center/issues)
+## 6. Security
+
+- Protected by Chrome extension sandbox environment
+- External communication encrypted via HTTPS
+- No personal data transmission to third-party servers
+
+## 7. Policy Changes
+
+When privacy policies are updated:
+- Users are notified through extension update notices
+- New version installation allows users to review changes
+
+## 8. Chrome Storage Reference
+
+Storage mechanisms used by Support Center extensions:
+- **Chrome Storage API**: Settings, local data
+- **IndexedDB**: Large-scale local data (learning statistics, history, etc.)
+- **Clipboard API**: Text copy functionality
+
+All data is encrypted and stored in the Chrome profile folder.
+
+## 9. Contact
+
+For questions about this Privacy Policy:
+
+- 📧 **Email**: dev.ohyt@gmail.com
+- 🐛 **Issues**: [GitHub Issues](https://github.com/vrwolf1004/support-center/issues)
+
+---
+
+**Note**: Please refer to the extension-specific links above for detailed privacy policies for each extension.
