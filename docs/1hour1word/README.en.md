@@ -38,6 +38,11 @@ Click the **⚙️ Settings** button at the bottom of the popup to open options.
 - Chrome extensions update automatically.
 - Manual: `chrome://extensions` → Click **Update**
 
+## Privacy Protection
+
+1Hour1Word collects minimal personal information.
+For details, see [Privacy Policy](./PRIVACY.en.md).
+
 ---
 
 Questions: Please submit via [Issues](https://github.com/vrwolf1004/support-center/issues).
