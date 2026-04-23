@@ -5,5 +5,5 @@
   { "path": "docs/stockpulse/README.md", "title": "StockPulse" },
   { "path": "docs/pichunter/README.md", "title": "PicHunter" },
   { "path": "docs/helpmehide/README.md", "title": "Help Me Hide" },
-  { "path": "docs/PRIVACY.md", "title": "개인정보 처리방침" }
+  { "path": "docs/PRIVACY.html", "title": "개인정보 처리방침" }
 ]

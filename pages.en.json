@@ -5,5 +5,5 @@
   { "path": "docs/stockpulse/README.en.md", "title": "StockPulse" },
   { "path": "docs/pichunter/README.en.md", "title": "PicHunter" },
   { "path": "docs/helpmehide/README.en.md", "title": "Help Me Hide" },
-  { "path": "docs/PRIVACY.en.md", "title": "Privacy Policy" }
+  { "path": "docs/PRIVACY.html", "title": "Privacy Policy" }
 ]
