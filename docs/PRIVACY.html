@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Support Center 개인정보 처리방침</title>
+    <link rel="stylesheet" href="../theme/artnouveau.css">
+    <link rel="stylesheet" href="../theme/style.css">
+    <style>
+        .privacy-container { max-width: 900px; margin: 32px auto; padding: 24px; background-color: var(--crema-surface); border-radius: var(--crema-radius-md); box-shadow: var(--crema-shadow); }
+        .privacy-container h1 { color: var(--crema-primary); margin-bottom: 8px; border-bottom: 1px solid var(--crema-border); padding-bottom: 16px; }
+        .last-updated { color: var(--crema-text-muted); font-size: 13px; margin-bottom: 24px; }
+        .privacy-container h2 { color: var(--crema-primary); margin-top: 32px; margin-bottom: 16px; font-size: 20px; }
+        .privacy-container h3 { color: var(--crema-text); margin-top: 20px; margin-bottom: 12px; font-size: 16px; }
+        .privacy-container p { line-height: 1.6; margin-bottom: 12px; color: var(--crema-text); }
+        .privacy-container ul, .privacy-container ol { margin-left: 20px; margin-bottom: 12px; }
+        .privacy-container li { margin-bottom: 8px; color: var(--crema-text); }
+        .privacy-container table { width: 100%; border-collapse: collapse; margin: 16px 0; }
+        .privacy-container table th, .privacy-container table td { border: 1px solid var(--crema-border); padding: 12px; text-align: left; color: var(--crema-text); }
+        .privacy-container table th { background-color: var(--crema-primary); color: var(--crema-text-on-primary); font-weight: bold; }
+        .privacy-container table tr:nth-child(even) { background-color: rgba(45, 106, 79, 0.05); }
+        .privacy-container table a { color: var(--crema-primary); text-decoration: none; }
+        .privacy-container table a:hover { text-decoration: underline; }
+        .contact-info { background-color: rgba(45, 106, 79, 0.1); border-left: 4px solid var(--crema-primary); padding: 16px; margin: 24px 0; border-radius: 4px; }
+        .contact-info a { color: var(--crema-primary); text-decoration: none; }
+        .contact-info a:hover { text-decoration: underline; }
+        @media (max-width: 768px) { .privacy-container { margin: 16px; padding: 16px; } .privacy-container table { font-size: 13px; } .privacy-container table th, .privacy-container table td { padding: 8px; } }
+    </style>
+</head>
+<body>
+    <nav id="nav">
+        <div class="nav-inner">
+            <h3><a href="../" id="logo" style="color: inherit; text-decoration: none; cursor: pointer;">Support Center</a></h3>
+            <div id="lang-switcher">
+                <button class="lang-btn" data-lang="ko">한국어</button>
+                <button class="lang-btn active" data-lang="en">English</button>
+            </div>
+            <button id="menu-toggle" class="menu-toggle">☰</button>
+            <ul id="nav-list"></ul>
+        </div>
+    </nav>
+    <div id="mobile-menu" class="mobile-menu">
+        <ul id="mobile-nav-list"></ul>
+    </div>
+
+    <main>
+        <div class="privacy-container">
+            <h1 id="title">Support Center 개인정보 처리방침</h1>
+            <div class="last-updated" id="updated">최종 수정일: 2026-04-23</div>
+
+            <h2 id="h-overview">1. 개요</h2>
+            <p id="p-overview">Support Center에서 제공하는 Chrome 확장들은 사용자의 개인정보를 최소한으로 수집하고, 사용자 기기에만 저장합니다.</p>
+
+            <h2 id="h-principles">2. 공통 원칙</h2>
+            <ul id="list-principles"></ul>
+
+            <h2 id="h-extensions">3. 확장별 개인정보 처리방침</h2>
+            <p id="p-extensions">각 확장의 구체적인 정보 수집 및 처리 방법은 다음을 참고하세요:</p>
+            <table id="table-extensions"></table>
+
+            <h2 id="h-retention">4. 정보 보관 및 파기</h2>
+            <ul id="list-retention"></ul>
+
+            <h2 id="h-rights">5. 사용자의 권리</h2>
+            <ul id="list-rights"></ul>
+
+            <h2 id="h-security">6. 보안</h2>
+            <ul id="list-security"></ul>
+
+            <h2 id="h-changes">7. 정책 변경</h2>
+            <ul id="list-changes"></ul>
+
+            <h2 id="h-storage">8. Chrome 저장소에 대한 참고사항</h2>
+            <ul id="list-storage"></ul>
+
+            <h2 id="h-contact">9. 문의</h2>
+            <div class="contact-info">
+                <p id="p-contact">개인정보 처리방침에 관한 문의는 아래로 접수해 주세요.</p>
+                <ul id="list-contact"></ul>
+            </div>
+        </div>
+    </main>
+
+    <script>
+        const i18n = {
+            ko: {
+                title: 'Support Center 개인정보 처리방침',
+                updated: '최종 수정일: 2026-04-23',
+                h_overview: '1. 개요',
+                p_overview: 'Support Center에서 제공하는 Chrome 확장들은 사용자의 개인정보를 최소한으로 수집하고, 사용자 기기에만 저장합니다. 각 확장별로 수집하는 정보가 다르므로, 구체적인 내용은 아래의 **확장별 개인정보 처리방침**을 참고하세요.',
+                h_principles: '2. 공통 원칙',
+                list_principles: [
+                    '개인 식별 정보 미수집: 이름, 이메일, 계정 정보 등을 수집하지 않습니다',
+                    '로컬 저장소 우선: 수집된 모든 데이터는 사용자 기기에만 저장됩니다',
+                    '사용자 제어: 확장을 삭제하면 저장된 모든 데이터가 자동으로 삭제됩니다',
+                    '외부 API 최소화: 기능상 필요한 경우에만 외부 API를 사용합니다',
+                    '투명성: 각 확장의 개인정보 처리방침을 명확히 공개합니다'
+                ],
+                h_extensions: '3. 확장별 개인정보 처리방침',
+                p_extensions: '각 확장의 구체적인 정보 수집 및 처리 방법은 다음을 참고하세요:',
+                table_headers: ['확장', '한국어', 'English'],
+                table_rows: [
+                    ['1Hour1Word', '<a href="/docs/1hour1word/privacy.html">개인정보 처리방침</a>', '<a href="/docs/1hour1word/privacy.html">Privacy Policy</a>'],
+                    ['SubDash', '<a href="/docs/subdash/privacy.html">개인정보 처리방침</a>', '<a href="/docs/subdash/privacy.html">Privacy Policy</a>'],
+                    ['StockPulse', '<a href="/docs/stockpulse/privacy.html">개인정보 처리방침</a>', '<a href="/docs/stockpulse/privacy.html">Privacy Policy</a>'],
+                    ['PicHunter', '<a href="/docs/pichunter/privacy.html">개인정보 처리방침</a>', '<a href="/docs/pichunter/privacy.html">Privacy Policy</a>'],
+                    ['Help Me Hide', '<a href="/docs/helpmehide/privacy.html">개인정보 처리방침</a>', '<a href="/docs/helpmehide/privacy.html">Privacy Policy</a>']
+                ],
+                h_retention: '4. 정보 보관 및 파기',
+                list_retention: [
+                    '보관: 사용자가 확장을 사용하는 동안 기기에 보관',
+                    '파기: 확장 삭제 시 자동으로 모든 데이터 삭제',
+                    '확장 업데이트: 데이터 손실 없음'
+                ],
+                h_rights: '5. 사용자의 권리',
+                list_rights: [
+                    '확장 언제든지 삭제 가능: 설정 → 확장 프로그램 → 제거',
+                    '데이터 열람 및 삭제: 확장이 로컬에만 저장하므로 사용자가 직접 관리 가능',
+                    '설정 제어: 각 확장의 설정을 통해 데이터 수집 범위 조절 가능'
+                ],
+                h_security: '6. 보안',
+                list_security: [
+                    'Chrome 확장의 sandbox 환경으로 보호',
+                    'HTTPS를 통한 외부 통신 암호화',
+                    '서드파티 서버로 개인 데이터 전송 금지'
+                ],
+                h_changes: '7. 정책 변경',
+                list_changes: [
+                    '개인정보 처리방침 변경 시: 확장의 업데이트 공지를 통해 안내',
+                    '새 버전 설치 시 변경 내용 확인 가능'
+                ],
+                h_storage: '8. Chrome 저장소에 대한 참고사항',
+                list_storage: [
+                    'Chrome Storage API: 설정, 로컬 데이터',
+                    'IndexedDB: 대용량 로컬 데이터 (학습 통계, 이력 등)',
+                    'Clipboard API: 텍스트 복사 기능',
+                    '모든 데이터는 Chrome 프로필 폴더에 암호화되어 저장됩니다'
+                ],
+                h_contact: '9. 문의',
+                p_contact: '개인정보 처리방침에 관한 문의는 아래로 접수해 주세요.',
+                list_contact: [
+                    '📧 이메일: dev.ohyt@gmail.com',
+                    '🐛 이슈: <a href="https://github.com/vrwolf1004/support-center/issues" target="_blank">GitHub Issues</a>'
+                ]
+            },
+            en: {
+                title: 'Support Center Privacy Policy',
+                updated: 'Last Updated: 2026-04-23',
+                h_overview: '1. Overview',
+                p_overview: 'Chrome extensions provided by Support Center collect minimal personal information and store it only on the user\'s device. Since each extension collects different information, please refer to the **Extension-Specific Privacy Policies** below for details.',
+                h_principles: '2. Common Principles',
+                list_principles: [
+                    'No Collection of Personally Identifiable Information: We do not collect names, emails, account information, etc.',
+                    'Local Storage Priority: All collected data is stored only on the user\'s device',
+                    'User Control: Removing the extension automatically deletes all stored data',
+                    'Minimal External API Usage: External APIs are used only when necessary for functionality',
+                    'Transparency: We publicly disclose each extension\'s privacy policy'
+                ],
+                h_extensions: '3. Extension-Specific Privacy Policies',
+                p_extensions: 'Refer to the following for specific information collection and processing methods for each extension:',
+                table_headers: ['Extension', 'Korean', 'English'],
+                table_rows: [
+                    ['1Hour1Word', '<a href="/docs/1hour1word/privacy.html">개인정보 처리방침</a>', '<a href="/docs/1hour1word/privacy.html">Privacy Policy</a>'],
+                    ['SubDash', '<a href="/docs/subdash/privacy.html">개인정보 처리방침</a>', '<a href="/docs/subdash/privacy.html">Privacy Policy</a>'],
+                    ['StockPulse', '<a href="/docs/stockpulse/privacy.html">개인정보 처리방침</a>', '<a href="/docs/stockpulse/privacy.html">Privacy Policy</a>'],
+                    ['PicHunter', '<a href="/docs/pichunter/privacy.html">개인정보 처리방침</a>', '<a href="/docs/pichunter/privacy.html">Privacy Policy</a>'],
+                    ['Help Me Hide', '<a href="/docs/helpmehide/privacy.html">개인정보 처리방침</a>', '<a href="/docs/helpmehide/privacy.html">Privacy Policy</a>']
+                ],
+                h_retention: '4. Data Retention and Deletion',
+                list_retention: [
+                    'Retention: Data is retained on the device while the extension is in use',
+                    'Deletion: All data is automatically deleted when the extension is removed',
+                    'Extension Updates: No data loss during updates'
+                ],
+                h_rights: '5. User Rights',
+                list_rights: [
+                    'Remove Extensions Anytime: Settings → Extensions → Remove',
+                    'Data Access and Deletion: Since extensions store data locally, users manage it directly',
+                    'Control Settings: Each extension\'s settings allow users to control data collection scope'
+                ],
+                h_security: '6. Security',
+                list_security: [
+                    'Protected by Chrome extension sandbox environment',
+                    'External communication encrypted via HTTPS',
+                    'No personal data transmission to third-party servers'
+                ],
+                h_changes: '7. Policy Changes',
+                list_changes: [
+                    'When privacy policies are updated: Users are notified through extension update notices',
+                    'New version installation allows users to review changes'
+                ],
+                h_storage: '8. Chrome Storage Reference',
+                list_storage: [
+                    'Chrome Storage API: Settings, local data',
+                    'IndexedDB: Large-scale local data (learning statistics, history, etc.)',
+                    'Clipboard API: Text copy functionality',
+                    'All data is encrypted and stored in the Chrome profile folder'
+                ],
+                h_contact: '9. Contact',
+                p_contact: 'For questions about this Privacy Policy:',
+                list_contact: [
+                    '📧 Email: dev.ohyt@gmail.com',
+                    '🐛 Issues: <a href="https://github.com/vrwolf1004/support-center/issues" target="_blank">GitHub Issues</a>'
+                ]
+            }
+        };
+
+        const currentLang = localStorage.getItem('lang') || 'en';
+        const text = i18n[currentLang] || i18n.ko;
+
+        document.addEventListener('DOMContentLoaded', () => {
+            document.title = text.title + ' - Support Center';
+            document.getElementById('title').textContent = text.title;
+            document.getElementById('updated').textContent = text.updated;
+            document.getElementById('h-overview').textContent = text.h_overview;
+            document.getElementById('p-overview').textContent = text.p_overview;
+            document.getElementById('h-principles').textContent = text.h_principles;
+            document.getElementById('h-extensions').textContent = text.h_extensions;
+            document.getElementById('p-extensions').textContent = text.p_extensions;
+            document.getElementById('h-retention').textContent = text.h_retention;
+            document.getElementById('h-rights').textContent = text.h_rights;
+            document.getElementById('h-security').textContent = text.h_security;
+            document.getElementById('h-changes').textContent = text.h_changes;
+            document.getElementById('h-storage').textContent = text.h_storage;
+            document.getElementById('h-contact').textContent = text.h_contact;
+            document.getElementById('p-contact').textContent = text.p_contact;
+
+            document.getElementById('list-principles').innerHTML = text.list_principles.map(item => `<li>${item}</li>`).join('');
+            const tableHtml = `<tr>${text.table_headers.map(h => `<th>${h}</th>`).join('')}</tr>${text.table_rows.map(row => `<tr>${row.map(cell => `<td>${cell}</td>`).join('')}</tr>`).join('')}`;
+            document.getElementById('table-extensions').innerHTML = tableHtml;
+            document.getElementById('list-retention').innerHTML = text.list_retention.map(item => `<li>${item}</li>`).join('');
+            document.getElementById('list-rights').innerHTML = text.list_rights.map(item => `<li>${item}</li>`).join('');
+            document.getElementById('list-security').innerHTML = text.list_security.map(item => `<li>${item}</li>`).join('');
+            document.getElementById('list-changes').innerHTML = text.list_changes.map(item => `<li>${item}</li>`).join('');
+            document.getElementById('list-storage').innerHTML = text.list_storage.map(item => `<li>${item}</li>`).join('');
+            document.getElementById('list-contact').innerHTML = text.list_contact.map(item => `<li>${item}</li>`).join('');
+
+            document.querySelectorAll('.lang-btn').forEach(btn => {
+                btn.classList.toggle('active', btn.dataset.lang === currentLang);
+                btn.addEventListener('click', () => {
+                    if (btn.dataset.lang !== currentLang) {
+                        localStorage.setItem('lang', btn.dataset.lang);
+                        location.reload();
+                    }
+                });
+            });
+
+            document.getElementById('logo').addEventListener('click', () => {
+                window.location.href = '../';
+            });
+        });
+    </script>
+</body>
+</html>
