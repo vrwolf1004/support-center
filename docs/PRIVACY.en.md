@@ -37,11 +37,11 @@ Refer to the following for specific information collection and processing method
 
 | Extension | Korean | English |
 |-----------|--------|---------|
-| **1Hour1Word** | [개인정보 처리방침](./1hour1word/PRIVACY.md) | [Privacy Policy](./1hour1word/PRIVACY.en.md) |
-| **SubDash** | [개인정보 처리방침](./subdash/PRIVACY.md) | [Privacy Policy](./subdash/PRIVACY.en.md) |
-| **StockPulse** | [개인정보 처리방침](./stockpulse/PRIVACY.md) | [Privacy Policy](./stockpulse/PRIVACY.en.md) |
-| **PicHunter** | [개인정보 처리방침](./pichunter/PRIVACY.md) | [Privacy Policy](./pichunter/PRIVACY.en.md) |
-| **Help Me Hide** | [개인정보 처리방침](./helpmehide/PRIVACY.md) | [Privacy Policy](./helpmehide/PRIVACY.en.md) |
+| **1Hour1Word** | [개인정보 처리방침](./#docs%2F1hour1word%2FPRIVACY.md) | [Privacy Policy](./#docs%2F1hour1word%2FPRIVACY.en.md) |
+| **SubDash** | [개인정보 처리방침](./#docs%2Fsubdash%2FPRIVACY.md) | [Privacy Policy](./#docs%2Fsubdash%2FPRIVACY.en.md) |
+| **StockPulse** | [개인정보 처리방침](./#docs%2Fstockpulse%2FPRIVACY.md) | [Privacy Policy](./#docs%2Fstockpulse%2FPRIVACY.en.md) |
+| **PicHunter** | [개인정보 처리방침](./#docs%2Fpichunter%2FPRIVACY.md) | [Privacy Policy](./#docs%2Fpichunter%2FPRIVACY.en.md) |
+| **Help Me Hide** | [개인정보 처리방침](./#docs%2Fhelpmehide%2FPRIVACY.md) | [Privacy Policy](./#docs%2Fhelpmehide%2FPRIVACY.en.md) |
 
 ## 4. Data Retention and Deletion
 
