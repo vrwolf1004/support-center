@@ -117,11 +117,15 @@
                     const li = document.createElement('li');
                     const a = document.createElement('a');
 
-                    // .html 파일은 직접 링크, 마크다운은 해시 링크
-                    if (p.path.endsWith('.html')) {
+                    // 외부 URL, .html 파일은 직접 링크, 마크다운은 해시 링크
+                    if (p.path.startsWith('http://') || p.path.startsWith('https://') || p.path.endsWith('.html')) {
                         a.href = p.path;
                         a.textContent = p.title;
                         a.dataset.path = p.path;
+                        if (p.path.startsWith('http://') || p.path.startsWith('https://')) {
+                            a.target = '_blank';
+                            a.rel = 'noopener noreferrer';
+                        }
                     } else {
                         a.href = '#' + encodeURIComponent(p.path);
                         a.textContent = p.title;
@@ -140,7 +144,7 @@
 
                     // 모바일 메뉴에도 같은 항목 추가
                     const mobileLi = li.cloneNode(true);
-                    if (!p.path.endsWith('.html')) {
+                    if (!p.path.endsWith('.html') && !p.path.startsWith('http://') && !p.path.startsWith('https://')) {
                         mobileLi.querySelector('a').addEventListener('click', (ev) => {
                             ev.preventDefault();
                             navigateTo(p.path, true);
