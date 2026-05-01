@@ -6,6 +6,7 @@ We provide guidance and help for using our products.
 - [SubDash](./#docs%2Fsubdash%2FREADME.en.md) — Manage your monthly subscription costs with a timeline extension
 - [StockPulse](./#docs%2Fstockpulse%2FREADME.en.md) — Track stock prices and get price change alerts extension
 - [PicHunter](./#docs%2Fpichunter%2FREADME.en.md) — Download images from webpages easily with this extension
+- [PickLayer](./#docs%2Fpicklayer%2FREADME.en.md) — Cross-platform UI component library
 - [Help Me Hide](./#docs%2Fhelpmehide%2FREADME.en.md) — Encrypt and hide text with PIN protection
 
 ---
