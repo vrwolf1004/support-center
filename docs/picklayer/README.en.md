@@ -1,4 +1,4 @@
-# PickLayer
+# PickLayer.net
 
 > A cross-platform design system that empowers developers and designers to create high-quality user interfaces quickly
 
