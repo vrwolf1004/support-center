@@ -30,24 +30,22 @@
     </main>
 
     <script>
-        // 다국어 메시지
         const i18nMessages = {
             ko: {
                 loadFail: '문서 목록을 불러오지 못했습니다.',
-                docFail: '문서를 불러오지 못했습니다.'
+                docFail: '문서를 불러오지 못했습니다.',
+                extensions: '확장'
             },
             en: {
                 loadFail: 'Failed to load page list.',
-                docFail: 'Failed to load document.'
+                docFail: 'Failed to load document.',
+                extensions: 'Extensions'
             }
         };
 
-        // 현재 언어 상태 및 현재 페이지
-        // 첫 방문: 영어(en), 이후 방문: localStorage에서 저장된 언어
         let currentLang = localStorage.getItem('lang') || 'en';
         let currentPath = null;
 
-        // 모바일 메뉴 토글
         const menuToggle = document.getElementById('menu-toggle');
         const mobileMenu = document.getElementById('mobile-menu');
 
@@ -55,12 +53,17 @@
             mobileMenu.classList.toggle('active');
         });
 
-        // 모바일 메뉴 닫기
         function closeMobileMenu() {
             mobileMenu.classList.remove('active');
         }
 
-        // 로고 클릭 이벤트 - 홈페이지로 이동
+        function closeDropdown() {
+            document.querySelectorAll('.nav-dropdown').forEach(d => d.classList.remove('open'));
+        }
+
+        // 드롭다운 외부 클릭 시 닫기
+        document.addEventListener('click', () => closeDropdown());
+
         document.getElementById('logo').addEventListener('click', (e) => {
             e.preventDefault();
             const homePath = currentLang === 'en' ? 'README.en.md' : 'README.md';
@@ -69,29 +72,23 @@
             closeMobileMenu();
         });
 
-        // 언어 전환 버튼 이벤트
         document.querySelectorAll('.lang-btn').forEach(btn => {
             btn.addEventListener('click', async () => {
                 const newLang = btn.dataset.lang;
-                if (currentLang === newLang) return; // 같은 언어 선택 시 무시
+                if (currentLang === newLang) return;
 
                 currentLang = newLang;
                 localStorage.setItem('lang', currentLang);
                 updateLangUI();
                 await loadPages();
 
-                // 현재 페이지를 해당 언어 버전으로 전환
                 if (currentPath) {
                     let newPath = currentPath;
-                    // ko ↔ en 전환
                     if (currentPath.endsWith('.en.md')) {
-                        // en → ko
                         newPath = currentPath.replace('.en.md', '.md');
                     } else if (currentPath.endsWith('.md')) {
-                        // ko → en
                         newPath = currentPath.replace('.md', '.en.md');
                     }
-
                     navigateTo(newPath, false);
                     setActiveNav(newPath);
                 }
@@ -104,7 +101,6 @@
             });
         }
 
-        // 페이지 목록 로드
         async function loadPages() {
             try {
                 const res = await fetch(`pages.${currentLang}.json`);
@@ -113,48 +109,96 @@
                 const mobileList = document.getElementById('mobile-nav-list');
                 list.innerHTML = '';
                 mobileList.innerHTML = '';
-                pages.forEach(p => {
-                    const li = document.createElement('li');
-                    const a = document.createElement('a');
 
-                    // 외부 URL, .html 파일은 직접 링크, 마크다운은 해시 링크
+                const extItems = [];
+                const extLabel = (i18nMessages[currentLang].extensions || 'Extensions') + ' ▾';
+
+                function makeAnchor(p) {
+                    const a = document.createElement('a');
+                    a.textContent = p.title;
+                    a.dataset.path = p.path;
                     if (p.path.startsWith('http://') || p.path.startsWith('https://') || p.path.endsWith('.html')) {
                         a.href = p.path;
-                        a.textContent = p.title;
-                        a.dataset.path = p.path;
                         if (p.path.startsWith('http://') || p.path.startsWith('https://')) {
                             a.target = '_blank';
                             a.rel = 'noopener noreferrer';
                         }
                     } else {
                         a.href = '#' + encodeURIComponent(p.path);
-                        a.textContent = p.title;
-                        a.style.cursor = 'pointer';
-                        a.dataset.path = p.path;
+                    }
+                    return a;
+                }
+
+                pages.forEach(p => {
+                    // 모바일: 항상 flat list
+                    const mobileLi = document.createElement('li');
+                    const mobileA = makeAnchor(p);
+                    if (!p.path.endsWith('.html') && !p.path.startsWith('http')) {
+                        mobileA.addEventListener('click', (ev) => {
+                            ev.preventDefault();
+                            navigateTo(p.path, true);
+                            setActiveNav(p.path);
+                            closeMobileMenu();
+                        });
+                    }
+                    mobileLi.appendChild(mobileA);
+                    mobileList.appendChild(mobileLi);
+
+                    // 데스크톱: docs/*.md 항목은 드롭다운으로, 나머지는 직접 추가
+                    const isExtItem = p.path.startsWith('docs/') && p.path.endsWith('.md');
+                    if (isExtItem) {
+                        extItems.push(p);
+                    } else {
+                        const li = document.createElement('li');
+                        const a = makeAnchor(p);
+                        if (!p.path.endsWith('.html') && !p.path.startsWith('http')) {
+                            a.addEventListener('click', (ev) => {
+                                ev.preventDefault();
+                                navigateTo(p.path, true);
+                                setActiveNav(p.path);
+                            });
+                        }
+                        li.appendChild(a);
+                        list.appendChild(li);
+                    }
+                });
+
+                // 드롭다운 삽입: 마지막 standalone 항목(Privacy) 앞에
+                if (extItems.length > 0) {
+                    const dropdownLi = document.createElement('li');
+                    dropdownLi.className = 'nav-dropdown';
+
+                    const dropBtn = document.createElement('button');
+                    dropBtn.className = 'nav-dropdown-btn';
+                    dropBtn.id = 'extensionsDropBtn';
+                    dropBtn.textContent = extLabel;
+
+                    const dropMenu = document.createElement('ul');
+                    dropMenu.className = 'nav-dropdown-menu';
+
+                    extItems.forEach(p => {
+                        const li = document.createElement('li');
+                        const a = makeAnchor(p);
                         a.addEventListener('click', (ev) => {
                             ev.preventDefault();
                             navigateTo(p.path, true);
                             setActiveNav(p.path);
-                            closeMobileMenu();
+                            closeDropdown();
                         });
-                    }
+                        li.appendChild(a);
+                        dropMenu.appendChild(li);
+                    });
 
-                    li.appendChild(a);
-                    list.appendChild(li);
+                    dropdownLi.appendChild(dropBtn);
+                    dropdownLi.appendChild(dropMenu);
+                    list.insertBefore(dropdownLi, list.lastChild);
 
-                    // 모바일 메뉴에도 같은 항목 추가
-                    const mobileLi = li.cloneNode(true);
-                    if (!p.path.endsWith('.html') && !p.path.startsWith('http://') && !p.path.startsWith('https://')) {
-                        mobileLi.querySelector('a').addEventListener('click', (ev) => {
-                            ev.preventDefault();
-                            navigateTo(p.path, true);
-                            setActiveNav(p.path);
-                            closeMobileMenu();
-                        });
-                    }
-                    mobileList.appendChild(mobileLi);
-                });
-                // initial route
+                    dropBtn.addEventListener('click', (e) => {
+                        e.stopPropagation();
+                        dropdownLi.classList.toggle('open');
+                    });
+                }
+
                 const initial = location.hash ? decodeURIComponent(location.hash.slice(1)) : `README${currentLang === 'en' ? '.en' : ''}.md`;
                 navigateTo(initial, false);
                 setActiveNav(initial);
@@ -168,6 +212,11 @@
             document.querySelectorAll('#nav-list a, #mobile-nav-list a').forEach(a => {
                 a.classList.toggle('active', a.dataset.path === path);
             });
+            const dropBtn = document.getElementById('extensionsDropBtn');
+            if (dropBtn) {
+                const isExtActive = !!document.querySelector('.nav-dropdown-menu a.active');
+                dropBtn.classList.toggle('has-active', isExtActive);
+            }
         }
 
         async function navigateTo(path, push) {
@@ -176,7 +225,7 @@
                 if (!res.ok) throw new Error(`Failed to fetch ${path}: ${res.status}`);
                 const md = await res.text();
                 document.getElementById('content').innerHTML = marked.parse(md);
-                currentPath = path; // 현재 페이지 업데이트
+                currentPath = path;
                 if (push) history.pushState({path}, '', '#' + encodeURIComponent(path));
             } catch (err) {
                 console.error(err);

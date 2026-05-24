@@ -179,6 +179,79 @@ nav a.active {
     font-weight: bold;
 }
 
+/* ── 드롭다운 네비게이션 ── */
+.nav-dropdown {
+    position: relative;
+}
+
+.nav-dropdown-btn {
+    display: inline-flex;
+    align-items: center;
+    padding: 8px 12px;
+    background: none;
+    border: none;
+    border-radius: var(--crema-radius-sm);
+    font-size: 14px;
+    color: var(--crema-text);
+    cursor: pointer;
+    font-family: var(--crema-font);
+    transition: background-color 0.2s, color 0.2s;
+    white-space: nowrap;
+}
+
+.nav-dropdown-btn:hover,
+.nav-dropdown.open .nav-dropdown-btn {
+    background-color: var(--crema-primary);
+    color: var(--crema-text-on-primary);
+}
+
+.nav-dropdown-btn.has-active {
+    background-color: var(--crema-primary);
+    color: var(--crema-text-on-primary);
+    font-weight: bold;
+}
+
+.nav-dropdown-menu {
+    display: none;
+    position: absolute;
+    top: calc(100% + 4px);
+    left: 0;
+    min-width: 180px;
+    background-color: var(--crema-surface);
+    border: 1px solid var(--crema-border);
+    border-radius: var(--crema-radius-md);
+    box-shadow: 0 4px 16px rgba(44,24,16,0.15);
+    z-index: 200;
+    list-style: none;
+    padding: 4px 0;
+    margin: 0;
+}
+
+.nav-dropdown.open .nav-dropdown-menu {
+    display: block;
+}
+
+.nav-dropdown-menu li {
+    margin: 0;
+}
+
+.nav-dropdown-menu a {
+    display: block;
+    padding: 9px 16px;
+    border-radius: 0;
+    white-space: nowrap;
+}
+
+.nav-dropdown-menu a:hover,
+.nav-dropdown-menu a.active {
+    background-color: var(--crema-primary);
+    color: var(--crema-text-on-primary);
+}
+
+.nav-dropdown-menu a.active {
+    font-weight: bold;
+}
+
 /* ── 메인 콘텐츠 ── */
 main {
     flex: 1;
