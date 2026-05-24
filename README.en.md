@@ -8,6 +8,8 @@ We provide guidance and help for using our products.
 - [PicHunter](./#docs%2Fpichunter%2FREADME.en.md) — Download images from webpages easily with this extension
 - [PickLayer](./#docs%2Fpicklayer%2FREADME.en.md) — Cross-platform UI component library
 - [Help Me Hide](./#docs%2Fhelpmehide%2FREADME.en.md) — Encrypt and hide text with PIN protection
+- [Look At The Sky](./#docs%2Flookatthesky%2FREADME.en.md) — Take a short break while enjoying sky photos in fullscreen
+- [DummyUp](./#docs%2Fdummyup%2FREADME.en.md) — Quickly generate dummy JSON data by specifying field names and types
 
 ---
 

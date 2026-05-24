@@ -8,6 +8,8 @@
 - [PicHunter](./#docs%2Fpichunter%2FREADME.md) — 웹페이지 이미지 다운로드 확장
 - [PickLayer](./#docs%2Fpicklayer%2FREADME.md) — 크로스플랫폼 UI 컴포넌트 라이브러리
 - [Help Me Hide](./#docs%2Fhelpmehide%2FREADME.md) — 텍스트 암호화 숨김 확장
+- [Look At The Sky](./#docs%2Flookatthesky%2FREADME.md) — 전체화면으로 하늘 사진을 감상하는 휴식 확장
+- [DummyUp](./#docs%2Fdummyup%2FREADME.md) — 필드명과 타입을 지정해 더미 JSON 데이터를 생성하는 확장
 
 ---
 
