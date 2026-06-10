@@ -10,6 +10,8 @@ We provide guidance and help for using our products.
 - [Help Me Hide](./#docs%2Fhelpmehide%2FREADME.en.md) — Encrypt and hide text with PIN protection
 - [Look At The Sky](./#docs%2Flookatthesky%2FREADME.en.md) — Take a short break while enjoying sky photos in fullscreen
 - [DummyUp](./#docs%2Fdummyup%2FREADME.en.md) — Quickly generate dummy JSON data by specifying field names and types
+- [AI Usage](./#docs%2Faiusage%2FREADME.en.md) — Monitor your Claude.ai and GitHub Copilot usage at a glance
+- [No Banner](./#docs%2Fnobanner%2FREADME.en.md) — Prepare illegal banner report information from a single photo
 
 ---
 

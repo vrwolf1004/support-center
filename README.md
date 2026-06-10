@@ -10,6 +10,8 @@
 - [Help Me Hide](./#docs%2Fhelpmehide%2FREADME.md) — 텍스트 암호화 숨김 확장
 - [Look At The Sky](./#docs%2Flookatthesky%2FREADME.md) — 전체화면으로 하늘 사진을 감상하는 휴식 확장
 - [DummyUp](./#docs%2Fdummyup%2FREADME.md) — 필드명과 타입을 지정해 더미 JSON 데이터를 생성하는 확장
+- [AI Usage](./#docs%2Faiusage%2FREADME.md) — Claude.ai와 GitHub Copilot 사용량을 한 번에 확인하는 확장
+- [No Banner](./#docs%2Fnobanner%2FREADME.md) — 사진 한 장으로 불법 현수막 신고 정보를 준비하는 웹 도구
 
 ---
 
