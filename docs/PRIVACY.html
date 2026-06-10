@@ -54,9 +54,12 @@
             <h2 id="h-principles">2. 공통 원칙</h2>
             <ul id="list-principles"></ul>
 
-            <h2 id="h-extensions">3. 확장별 개인정보 처리방침</h2>
-            <p id="p-extensions">각 확장의 구체적인 정보 수집 및 처리 방법은 다음을 참고하세요:</p>
-            <table id="table-extensions"></table>
+            <h2 id="h-extensions">3. 프로그램별 개인정보 처리방침</h2>
+            <p id="p-extensions">각 프로그램의 구체적인 정보 수집 및 처리 방법은 다음을 참고하세요:</p>
+            <h3 id="h-chrome-ext">Chrome 확장</h3>
+            <table id="table-chrome"></table>
+            <h3 id="h-sites">사이트</h3>
+            <table id="table-sites"></table>
 
             <h2 id="h-retention">4. 정보 보관 및 파기</h2>
             <ul id="list-retention"></ul>
@@ -96,19 +99,23 @@
                     '외부 API 최소화: 기능상 필요한 경우에만 외부 API를 사용합니다',
                     '투명성: 각 확장의 개인정보 처리방침을 명확히 공개합니다'
                 ],
-                h_extensions: '3. 확장별 개인정보 처리방침',
-                p_extensions: '각 확장의 구체적인 정보 수집 및 처리 방법은 다음을 참고하세요:',
-                table_headers: ['확장', '한국어', 'English'],
-                table_rows: [
+                h_extensions: '3. 프로그램별 개인정보 처리방침',
+                p_extensions: '각 프로그램의 구체적인 정보 수집 및 처리 방법은 다음을 참고하세요:',
+                h_chrome_ext: 'Chrome 확장',
+                h_sites: '사이트',
+                table_headers: ['프로그램', '한국어', 'English'],
+                table_chrome_rows: [
                     ['1Hour1Word', '<a href="/docs/1hour1word/privacy.html">개인정보 처리방침</a>', '<a href="/docs/1hour1word/privacy.html">Privacy Policy</a>'],
                     ['SubDash', '<a href="/docs/subdash/privacy.html">개인정보 처리방침</a>', '<a href="/docs/subdash/privacy.html">Privacy Policy</a>'],
                     ['StockPulse', '<a href="/docs/stockpulse/privacy.html">개인정보 처리방침</a>', '<a href="/docs/stockpulse/privacy.html">Privacy Policy</a>'],
                     ['PicHunter', '<a href="/docs/pichunter/privacy.html">개인정보 처리방침</a>', '<a href="/docs/pichunter/privacy.html">Privacy Policy</a>'],
-                    ['PickLayer', '<a href="/docs/picklayer/privacy.html">개인정보 처리방침</a>', '<a href="/docs/picklayer/privacy.html">Privacy Policy</a>'],
                     ['Help Me Hide', '<a href="/docs/helpmehide/privacy.html">개인정보 처리방침</a>', '<a href="/docs/helpmehide/privacy.html">Privacy Policy</a>'],
                     ['Look At The Sky', '<a href="/docs/lookatthesky/privacy.html">개인정보 처리방침</a>', '<a href="/docs/lookatthesky/privacy.html">Privacy Policy</a>'],
                     ['DummyUp', '<a href="/docs/dummyup/privacy.html">개인정보 처리방침</a>', '<a href="/docs/dummyup/privacy.html">Privacy Policy</a>'],
-                    ['AI Usage', '<a href="/docs/aiusage/privacy.html">개인정보 처리방침</a>', '<a href="/docs/aiusage/privacy.html">Privacy Policy</a>'],
+                    ['AI Usage', '<a href="/docs/aiusage/privacy.html">개인정보 처리방침</a>', '<a href="/docs/aiusage/privacy.html">Privacy Policy</a>']
+                ],
+                table_sites_rows: [
+                    ['PickLayer', '<a href="/docs/picklayer/privacy.html">개인정보 처리방침</a>', '<a href="/docs/picklayer/privacy.html">Privacy Policy</a>'],
                     ['No Banner', '<a href="/docs/nobanner/privacy.html">개인정보 처리방침</a>', '<a href="/docs/nobanner/privacy.html">Privacy Policy</a>']
                 ],
                 h_retention: '4. 정보 보관 및 파기',
@@ -161,19 +168,23 @@
                     'Minimal External API Usage: External APIs are used only when necessary for functionality',
                     'Transparency: We publicly disclose each extension\'s privacy policy'
                 ],
-                h_extensions: '3. Extension-Specific Privacy Policies',
-                p_extensions: 'Refer to the following for specific information collection and processing methods for each extension:',
-                table_headers: ['Extension', 'Korean', 'English'],
-                table_rows: [
+                h_extensions: '3. Program-Specific Privacy Policies',
+                p_extensions: 'Refer to the following for specific information collection and processing methods for each program:',
+                h_chrome_ext: 'Chrome Extensions',
+                h_sites: 'Sites',
+                table_headers: ['Program', 'Korean', 'English'],
+                table_chrome_rows: [
                     ['1Hour1Word', '<a href="/docs/1hour1word/privacy.html">개인정보 처리방침</a>', '<a href="/docs/1hour1word/privacy.html">Privacy Policy</a>'],
                     ['SubDash', '<a href="/docs/subdash/privacy.html">개인정보 처리방침</a>', '<a href="/docs/subdash/privacy.html">Privacy Policy</a>'],
                     ['StockPulse', '<a href="/docs/stockpulse/privacy.html">개인정보 처리방침</a>', '<a href="/docs/stockpulse/privacy.html">Privacy Policy</a>'],
                     ['PicHunter', '<a href="/docs/pichunter/privacy.html">개인정보 처리방침</a>', '<a href="/docs/pichunter/privacy.html">Privacy Policy</a>'],
-                    ['PickLayer', '<a href="/docs/picklayer/privacy.html">개인정보 처리방침</a>', '<a href="/docs/picklayer/privacy.html">Privacy Policy</a>'],
                     ['Help Me Hide', '<a href="/docs/helpmehide/privacy.html">개인정보 처리방침</a>', '<a href="/docs/helpmehide/privacy.html">Privacy Policy</a>'],
                     ['Look At The Sky', '<a href="/docs/lookatthesky/privacy.html">개인정보 처리방침</a>', '<a href="/docs/lookatthesky/privacy.html">Privacy Policy</a>'],
                     ['DummyUp', '<a href="/docs/dummyup/privacy.html">개인정보 처리방침</a>', '<a href="/docs/dummyup/privacy.html">Privacy Policy</a>'],
-                    ['AI Usage', '<a href="/docs/aiusage/privacy.html">개인정보 처리방침</a>', '<a href="/docs/aiusage/privacy.html">Privacy Policy</a>'],
+                    ['AI Usage', '<a href="/docs/aiusage/privacy.html">개인정보 처리방침</a>', '<a href="/docs/aiusage/privacy.html">Privacy Policy</a>']
+                ],
+                table_sites_rows: [
+                    ['PickLayer', '<a href="/docs/picklayer/privacy.html">개인정보 처리방침</a>', '<a href="/docs/picklayer/privacy.html">Privacy Policy</a>'],
                     ['No Banner', '<a href="/docs/nobanner/privacy.html">개인정보 처리방침</a>', '<a href="/docs/nobanner/privacy.html">Privacy Policy</a>']
                 ],
                 h_retention: '4. Data Retention and Deletion',
@@ -227,6 +238,8 @@
             document.getElementById('h-principles').textContent = text.h_principles;
             document.getElementById('h-extensions').textContent = text.h_extensions;
             document.getElementById('p-extensions').textContent = text.p_extensions;
+            document.getElementById('h-chrome-ext').textContent = text.h_chrome_ext;
+            document.getElementById('h-sites').textContent = text.h_sites;
             document.getElementById('h-retention').textContent = text.h_retention;
             document.getElementById('h-rights').textContent = text.h_rights;
             document.getElementById('h-security').textContent = text.h_security;
@@ -236,8 +249,9 @@
             document.getElementById('p-contact').textContent = text.p_contact;
 
             document.getElementById('list-principles').innerHTML = text.list_principles.map(item => `<li>${item}</li>`).join('');
-            const tableHtml = `<tr>${text.table_headers.map(h => `<th>${h}</th>`).join('')}</tr>${text.table_rows.map(row => `<tr>${row.map(cell => `<td>${cell}</td>`).join('')}</tr>`).join('')}`;
-            document.getElementById('table-extensions').innerHTML = tableHtml;
+            const headerHtml = `<tr>${text.table_headers.map(h => `<th>${h}</th>`).join('')}</tr>`;
+            document.getElementById('table-chrome').innerHTML = headerHtml + text.table_chrome_rows.map(row => `<tr>${row.map(cell => `<td>${cell}</td>`).join('')}</tr>`).join('');
+            document.getElementById('table-sites').innerHTML = headerHtml + text.table_sites_rows.map(row => `<tr>${row.map(cell => `<td>${cell}</td>`).join('')}</tr>`).join('');
             document.getElementById('list-retention').innerHTML = text.list_retention.map(item => `<li>${item}</li>`).join('');
             document.getElementById('list-rights').innerHTML = text.list_rights.map(item => `<li>${item}</li>`).join('');
             document.getElementById('list-security').innerHTML = text.list_security.map(item => `<li>${item}</li>`).join('');
