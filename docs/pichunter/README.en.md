@@ -4,7 +4,7 @@ A Chrome extension that scans webpages for images and helps you download them ea
 
 ## Installation
 
-1. Install the extension.
+1. Visit the [Chrome Web Store page](https://chromewebstore.google.com/detail/blcgeacdampfbancfiihgidejllkamna?utm_source=item-share-cb) to install.
 2. Installation is complete when the PicHunter icon appears in the toolbar.
 
 ## Usage
