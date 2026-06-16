@@ -1,17 +1,17 @@
-# SubDash
+# Subscription Timeline
 
 A Chrome extension that visually manages your monthly subscription service costs with a timeline.
 
 ## Installation
 
 1. Visit the [Chrome Web Store page](https://chromewebstore.google.com/detail/ibnnciahkophlndmjfmjahbjnibljcbe?utm_source=item-share-cb) to install.
-2. Installation is complete when the SubDash icon appears in the toolbar.
+2. Installation is complete when the Subscription Timeline icon appears in the toolbar.
 
 ## Usage
 
 ### Add Service
 
-1. Click the SubDash icon in the toolbar.
+1. Click the Subscription Timeline icon in the toolbar.
 2. Click the **+ Add** button.
 3. Enter information in the right panel:
    - Service name (e.g., Claude Pro)
@@ -60,7 +60,7 @@ A Chrome extension that visually manages your monthly subscription service costs
 
 ## Privacy Protection
 
-SubDash manages your subscription data securely.
+Subscription Timeline manages your subscription data securely.
 For details, see [Privacy Policy](/docs/subdash/privacy.html).
 
 ---

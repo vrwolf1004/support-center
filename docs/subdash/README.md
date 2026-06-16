@@ -1,17 +1,17 @@
-# SubDash
+# Subscription Timeline
 
 월별 구독 서비스 비용을 타임라인으로 시각적으로 관리하는 Chrome 확장입니다.
 
 ## 설치
 
 1. [Chrome 웹 스토어 페이지](https://chromewebstore.google.com/detail/ibnnciahkophlndmjfmjahbjnibljcbe?utm_source=item-share-cb)에서 설치합니다.
-2. 툴바에 SubDash 아이콘이 나타나면 설치 완료입니다.
+2. 툴바에 Subscription Timeline 아이콘이 나타나면 설치 완료입니다.
 
 ## 사용법
 
 ### 서비스 추가
 
-1. 툴바의 SubDash 아이콘을 클릭합니다.
+1. 툴바의 Subscription Timeline 아이콘을 클릭합니다.
 2. **+ 추가** 버튼을 클릭합니다.
 3. 오른쪽 패널에서 정보를 입력합니다:
    - 서비스명 (예: Claude Pro)
@@ -60,7 +60,7 @@
 
 ## 개인정보 보호
 
-SubDash는 구독 데이터를 안전하게 관리합니다.
+Subscription Timeline는 구독 데이터를 안전하게 관리합니다.
 자세한 내용은 [개인정보 처리방침](/docs/subdash/privacy.html)을 참고하세요.
 
 ---
