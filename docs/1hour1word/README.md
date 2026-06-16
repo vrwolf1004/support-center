@@ -4,7 +4,7 @@
 
 ## 설치
 
-1. [Chrome 웹 스토어 페이지](https://chromewebstore.google.com/detail/1hour1word-language-flash/ajmghefdjpgopkaepnfahnngddjlajff?hl=ko&utm_source=ext_sidebar)에서 설치합니다.
+1. [Chrome 웹 스토어 페이지](https://chromewebstore.google.com/detail/ajmghefdjpgopkaepnfahnngddjlajff?utm_source=item-share-cb)에서 설치합니다.
 2. Chrome에 추가를 클릭합니다.
 3. 툴바에 1Hour1Word 아이콘이 나타나면 설치 완료입니다.
 
