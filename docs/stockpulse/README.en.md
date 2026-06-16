@@ -4,7 +4,7 @@ A Chrome extension that automatically checks stock prices of your interest and s
 
 ## Installation
 
-1. Search for "StockPulse" on the Chrome Web Store.
+1. Visit the [Chrome Web Store page](https://chromewebstore.google.com/detail/jcgjanimcfpjlpnjeieipjjmcpmndahh?utm_source=item-share-cb) to install.
 2. Click "Add to Chrome".
 3. Installation is complete when the StockPulse icon appears in the toolbar.
 
