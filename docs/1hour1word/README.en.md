@@ -4,7 +4,7 @@ Learn a new foreign language word every hour with notifications in this Chrome e
 
 ## Installation
 
-1. Search for "1Hour1Word" on the Chrome Web Store.
+1. Visit the [Chrome Web Store page](https://chromewebstore.google.com/detail/1hour1word-language-flash/ajmghefdjpgopkaepnfahnngddjlajff?hl=ko&utm_source=ext_sidebar) to install.
 2. Click "Add to Chrome".
 3. Installation is complete when the 1Hour1Word icon appears in the toolbar.
 
