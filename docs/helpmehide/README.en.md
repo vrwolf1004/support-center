@@ -4,7 +4,7 @@ A Chrome extension that encrypts selected text with a PIN to hide it securely.
 
 ## Installation
 
-1. Install the extension.
+1. Visit the [Chrome Web Store page](https://chromewebstore.google.com/detail/bmogneedgloapdljdgekhgkbmcmmjoij?utm_source=item-share-cb) to install.
 2. Installation is complete when the Help Me Hide icon appears in the toolbar.
 
 ## Usage

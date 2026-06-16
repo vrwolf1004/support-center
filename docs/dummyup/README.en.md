@@ -4,7 +4,7 @@ A Chrome extension that quickly generates dummy JSON data by specifying field na
 
 ## Installation
 
-1. Visit the [Chrome Web Store page](https://chromewebstore.google.com/detail/dummyup/eoeaelhpdlmfeajodifcfpgdcomglmjo?hl=ko&utm_source=ext_sidebar) to install. ([Share link](https://chromewebstore.google.com/detail/eoeaelhpdlmfeajodifcfpgdcomglmjo?utm_source=item-share-cb))
+1. Visit the [Chrome Web Store page](https://chromewebstore.google.com/detail/eoeaelhpdlmfeajodifcfpgdcomglmjo?utm_source=item-share-cb)
 2. Installation is complete when the DummyUp icon appears in the toolbar.
 
 ## Usage
