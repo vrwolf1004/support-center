@@ -4,7 +4,7 @@
 
 ## 설치
 
-1. 확장을 설치합니다.
+1. [Chrome 웹 스토어 페이지](https://chromewebstore.google.com/detail/dummyup/eoeaelhpdlmfeajodifcfpgdcomglmjo?hl=ko&utm_source=ext_sidebar)에서 설치합니다.
 2. 툴바에 DummyUp 아이콘이 나타나면 설치 완료입니다.
 
 ## 사용법
