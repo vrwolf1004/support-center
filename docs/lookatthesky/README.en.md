@@ -4,7 +4,7 @@ Take a short break while enjoying sky photos in fullscreen.
 
 ## Installation
 
-1. Install the extension.
+1. Visit the [Chrome Web Store page](https://chromewebstore.google.com/detail/lagkfaiecnddccbdgijgahcpohfjohga?utm_source=item-share-cb) to install.
 2. Installation is complete when the Look At The Sky icon appears in the toolbar.
 
 ## Usage
