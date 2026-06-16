@@ -7,7 +7,7 @@ Go from photo upload to report submission in one streamlined flow.
 
 ### Step 1 — Upload Photo
 
-1. Visit the site.
+1. Visit [snap.picklayer.net](https://snap.picklayer.net).
 2. Click the **Report** button.
 3. Upload a photo of the illegal banner.
 
