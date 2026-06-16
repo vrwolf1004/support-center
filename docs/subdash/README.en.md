@@ -4,7 +4,7 @@ A Chrome extension that visually manages your monthly subscription service costs
 
 ## Installation
 
-1. Install the extension.
+1. Visit the [Chrome Web Store page](https://chromewebstore.google.com/detail/ibnnciahkophlndmjfmjahbjnibljcbe?utm_source=item-share-cb) to install.
 2. Installation is complete when the SubDash icon appears in the toolbar.
 
 ## Usage
