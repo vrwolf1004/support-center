@@ -11,6 +11,7 @@
 - [Help Me Hide](./#docs%2Fhelpmehide%2FREADME.md) — 텍스트 암호화 숨김 확장
 - [Look At The Sky](./#docs%2Flookatthesky%2FREADME.md) — 전체화면으로 하늘 사진을 감상하는 휴식 확장
 - [DummyUp](./#docs%2Fdummyup%2FREADME.md) — 필드명과 타입을 지정해 더미 JSON 데이터를 생성하는 확장
+- [KeepSpotlight](./#docs%2Fkeepspotlight%2FREADME.md) — Windows Spotlight 잠금화면 이미지를 탐색하고 저장하는 확장
 - [AI Usage](./#docs%2Faiusage%2FREADME.md) — Claude.ai와 GitHub Copilot 사용량을 한 번에 확인하는 확장
 
 ## 사이트
