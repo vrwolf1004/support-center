@@ -9,7 +9,7 @@ A Chrome extension that browses and saves Windows Spotlight lock screen images.
 
 ## Installation
 
-1. Install from the [Chrome Web Store page](https://chromewebstore.google.com/detail/cpanlpojjedhilihgogdldbmjbmoolng?utm_source=item-share-cb).
+1. Install from the [Chrome Web Store page](https://chromewebstore.google.com/detail/cpanlpojjedhilihgogdldbmjbmoolng?utm_source=item-share-cb)..
 2. Installation is complete when the KeepSpotlight icon appears in the toolbar.
 
 ## Usage
