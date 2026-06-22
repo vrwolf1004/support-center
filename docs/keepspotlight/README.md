@@ -9,7 +9,7 @@ Windows Spotlight 잠금화면 이미지를 탐색하고 저장하는 Chrome 확
 
 ## 설치
 
-1. Chrome 웹 스토어에서 **KeepSpotlight**를 검색하여 설치합니다.
+1. [Chrome 웹 스토어 페이지](https://chromewebstore.google.com/detail/cpanlpojjedhilihgogdldbmjbmoolng?utm_source=item-share-cb)에서 설치합니다.
 2. 툴바에 KeepSpotlight 아이콘이 나타나면 설치 완료입니다.
 
 ## 사용법
