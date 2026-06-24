@@ -4,7 +4,7 @@ A Chrome extension that lets you check Claude.ai and GitHub Copilot usage at a g
 
 ## Installation
 
-1. Install the extension.
+1. Install from the [Chrome Web Store page](https://chromewebstore.google.com/detail/ldnokaoohjkaofnejjejlnmoonepbaob?utm_source=item-share-cb).
 2. Installation is complete when the AI Usage icon appears in the toolbar.
 
 ## Usage
