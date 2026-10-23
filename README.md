@@ -19,6 +19,10 @@
 - [PickLayer](./#docs%2Fpicklayer%2FREADME.md) — 크로스플랫폼 UI 컴포넌트 라이브러리
 - [No Banner](./#docs%2Fnobanner%2FREADME.md) — 사진 한 장으로 불법 현수막 신고 정보를 준비하는 웹 도구
 
+## herdr 플러그인
+
+- [herdr 플러그인](./#docs%2Fherdr-plugins%2FREADME.md) — herdr 작업 공간의 대시보드와 사이드바에서 쓰는 플러그인 모음
+
 ---
 
 ## 문의 및 지원
