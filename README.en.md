@@ -22,11 +22,22 @@ We provide guidance and help for using our products.
 
 ## herdr Plugins
 
-- [herdr Plugins](./#docs%2Fherdr-plugins%2FREADME.en.md) — Plugins for herdr: dashboards, sidebar, Obsidian, chat, and games
+- [herdr-devrun](https://github.com/vrwolf1004/herdr-devrun) — Run and manage a project's development services (backend, frontend, and more) from one dashboard
+- [herdr-obsidian](https://github.com/vrwolf1004/herdr-obsidian) — Browse, read, edit, and search an Obsidian vault in a herdr pane
+- [herdr-simple-git](https://github.com/vrwolf1004/herdr-simple-git) — Run git pull, commit, and push from herdr, without AI
+- [herdr-stockpulse](https://github.com/vrwolf1004/herdr-stockpulse) — Show stock prices and trends in the dashboard and sidebar
+- [herdr-timekit](https://github.com/vrwolf1004/herdr-timekit) — Show the time, world clocks, a timer, and a counter in the sidebar
+- [herdr-ai-feedbag](https://github.com/vrwolf1004/herdr-ai-feedbag) — Show Claude Code, Copilot, Codex, and Gemini usage in the sidebar
+- [herdr-radio](https://github.com/vrwolf1004/herdr-radio) — Play internet radio inside herdr
+- [herdr-talk](https://github.com/vrwolf1004/herdr-talk) — Chat with people on other PCs inside herdr (security fixes in progress; check before using for sensitive conversations)
+- [herdr-tetris](https://github.com/vrwolf1004/herdr-tetris) — Terminal games: Tetris, Ladder, Snake, and Minesweeper
+- [herdr-dock-grid](https://github.com/vrwolf1004/herdr-dock-grid) — Shared module that manages pane layout for the dock plugins
 
 ## Orca Plugins
 
-- [Orca Plugins](./#docs%2Forca-plugins%2FREADME.en.md) — Plugins for the Orca sidebar
+- [Obsidian for Orca](https://orca.dev/plugins/vrwolf1004/orca-obsidian) — Browse and read Obsidian vaults from the Orca sidebar
+- [Radio for Orca](https://orca.dev/plugins/vrwolf1004/orca-radio) — Play internet radio from the Orca sidebar
+- [Tetris for Orca](https://orca.dev/plugins/vrwolf1004/orca-tetris) — Sidebar games: Tetris, Ladder, Snake, and Minesweeper
 
 ---
 
