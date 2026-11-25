@@ -46,7 +46,7 @@
     <main>
         <div class="privacy-container">
             <h1 id="title">Support Center 개인정보 처리방침</h1>
-            <div class="last-updated" id="updated">최종 수정일: 2026-05-24</div>
+            <div class="last-updated" id="updated">최종 수정일: 2026-11-25</div>
 
             <h2 id="h-overview">1. 개요</h2>
             <p id="p-overview">Support Center에서 Chrome 확장 및 사이트 운영에 있어 사용자의 개인정보를 최소한으로 수집하고, 사용자 기기에만 저장합니다.</p>
@@ -60,6 +60,10 @@
             <table id="table-chrome"></table>
             <h3 id="h-sites">사이트</h3>
             <table id="table-sites"></table>
+            <h3 id="h-herdr">herdr 플러그인</h3>
+            <table id="table-herdr"></table>
+            <h3 id="h-orca">Orca 플러그인</h3>
+            <table id="table-orca"></table>
 
             <h2 id="h-retention">4. 정보 보관 및 파기</h2>
             <ul id="list-retention"></ul>
@@ -88,7 +92,7 @@
         const i18n = {
             ko: {
                 title: 'Support Center 개인정보 처리방침',
-                updated: '최종 수정일: 2026-06-10',
+                updated: '최종 수정일: 2026-11-25',
                 h_overview: '1. 개요',
                 p_overview: 'Support Center에서 Chrome 확장 및 사이트 운영에 있어 사용자의 개인정보를 최소한으로 수집하고, 사용자 기기에만 저장합니다.',
                 h_principles: '2. 공통 원칙',
@@ -117,7 +121,27 @@
                 ],
                 table_sites_rows: [
                     ['PickLayer', '<a href="/docs/picklayer/privacy.html">개인정보 처리방침</a>', '<a href="/docs/picklayer/privacy.html">Privacy Policy</a>'],
-                    ['No Banner', '<a href="/docs/nobanner/privacy.html">개인정보 처리방침</a>', '<a href="/docs/nobanner/privacy.html">Privacy Policy</a>']
+                    ['No Banner', '<a href="/docs/nobanner/privacy.html">개인정보 처리방침</a>', '<a href="/docs/nobanner/privacy.html">Privacy Policy</a>'],
+                    ['pickspinners', '회원가입 없음. 방문 분석 도구(Google Analytics) 사용', 'No sign-up. Uses a visitor analytics tool (Google Analytics)']
+                ],
+                h_herdr: 'herdr 플러그인',
+                h_orca: 'Orca 플러그인',
+                table_ext_headers: ['프로그램', '외부 전송', '비고'],
+                table_herdr_rows: [
+                    ['herdr-devrun', '없음', '로컬에서 개발 서비스를 실행합니다'],
+                    ['herdr-obsidian', '없음', '로컬 볼트 파일을 읽고 편집합니다'],
+                    ['herdr-simple-git', '사용자가 설정한 Git 저장소와 통신 (pull, push 실행 시)', '설정한 저장소에만 연결합니다'],
+                    ['herdr-stockpulse', '공개 IP를 사용해 주가 데이터 API와 통신', '기본 Yahoo Finance, 선택 시 iTick'],
+                    ['herdr-timekit', '공휴일 데이터 요청 (Nager.Date)', '한국 공휴일은 내장 데이터로 보완하며 로컬에 캐시합니다'],
+                    ['herdr-ai-feedbag', 'Claude Code, GitHub Copilot 사용량 조회 요청', 'Claude Code, GitHub Copilot 사용량을 사이드바에 표시'],
+                    ['herdr-radio', '없음', '방송국 재생 및 로컬 설정 저장'],
+                    ['herdr-tetris', '없음', '터미널 게임'],
+                    ['herdr-dock-grid', '없음', '도크 플러그인들이 쓰는 pane 배치를 관리합니다']
+                ],
+                table_orca_rows: [
+                    ['Obsidian for Orca', '없음', 'Orca 사이드바에서 Obsidian 보관함을 탐색하고 읽습니다'],
+                    ['Radio for Orca', '공개 라디오 스트리밍 사용 (외부 방송 서버에서 스트림 수신)', 'Orca 사이드바에서 인터넷 라디오를 재생합니다'],
+                    ['Tetris for Orca', '없음', 'Orca 사이드바 게임']
                 ],
                 h_retention: '4. 정보 보관 및 파기',
                 list_retention: [
@@ -158,7 +182,7 @@
             },
             en: {
                 title: 'Support Center Privacy Policy',
-                updated: 'Last Updated: 2026-06-10',
+                updated: 'Last Updated: 2026-11-25',
                 h_overview: '1. Overview',
                 p_overview: 'Support Center collects minimal personal information in operating its Chrome extensions and sites, storing it only on the user\'s device.',
                 h_principles: '2. Common Principles',
@@ -187,7 +211,27 @@
                 ],
                 table_sites_rows: [
                     ['PickLayer', '<a href="/docs/picklayer/privacy.html">개인정보 처리방침</a>', '<a href="/docs/picklayer/privacy.html">Privacy Policy</a>'],
-                    ['No Banner', '<a href="/docs/nobanner/privacy.html">개인정보 처리방침</a>', '<a href="/docs/nobanner/privacy.html">Privacy Policy</a>']
+                    ['No Banner', '<a href="/docs/nobanner/privacy.html">개인정보 처리방침</a>', '<a href="/docs/nobanner/privacy.html">Privacy Policy</a>'],
+                    ['pickspinners', 'No sign-up. Uses a visitor analytics tool (Google Analytics)', 'No sign-up. Uses a visitor analytics tool (Google Analytics)']
+                ],
+                h_herdr: 'herdr Plugins',
+                h_orca: 'Orca Plugins',
+                table_ext_headers: ['Program', 'External transmission', 'Notes'],
+                table_herdr_rows: [
+                    ['herdr-devrun', 'None', 'Runs development services locally'],
+                    ['herdr-obsidian', 'None', 'Reads and edits local vault files'],
+                    ['herdr-simple-git', 'Communicates with the Git repository you configure (on pull and push)', 'Connects only to repositories you set up'],
+                    ['herdr-stockpulse', 'Uses a public IP to communicate with the stock data API', 'Yahoo Finance by default, iTick optional'],
+                    ['herdr-timekit', 'Requests public holiday data (Nager.Date)', 'Korean holidays are supplemented by bundled data and cached locally'],
+                    ['herdr-ai-feedbag', 'Requests Claude Code and GitHub Copilot usage data', 'Shows Claude Code and GitHub Copilot usage in the sidebar'],
+                    ['herdr-radio', 'None', 'Plays radio stations and saves local settings'],
+                    ['herdr-tetris', 'None', 'Terminal game'],
+                    ['herdr-dock-grid', 'None', 'Manages pane layout used by the dock plugins']
+                ],
+                table_orca_rows: [
+                    ['Obsidian for Orca', 'None', 'Browses and reads Obsidian vaults in the Orca sidebar'],
+                    ['Radio for Orca', 'Uses public radio streaming (receives streams from external broadcast servers)', 'Plays internet radio in the Orca sidebar'],
+                    ['Tetris for Orca', 'None', 'Game in the Orca sidebar']
                 ],
                 h_retention: '4. Data Retention and Deletion',
                 list_retention: [
@@ -242,6 +286,8 @@
             document.getElementById('p-extensions').textContent = text.p_extensions;
             document.getElementById('h-chrome-ext').textContent = text.h_chrome_ext;
             document.getElementById('h-sites').textContent = text.h_sites;
+            document.getElementById('h-herdr').textContent = text.h_herdr;
+            document.getElementById('h-orca').textContent = text.h_orca;
             document.getElementById('h-retention').textContent = text.h_retention;
             document.getElementById('h-rights').textContent = text.h_rights;
             document.getElementById('h-security').textContent = text.h_security;
@@ -254,6 +300,9 @@
             const headerHtml = `<tr>${text.table_headers.map(h => `<th>${h}</th>`).join('')}</tr>`;
             document.getElementById('table-chrome').innerHTML = headerHtml + text.table_chrome_rows.map(row => `<tr>${row.map(cell => `<td>${cell}</td>`).join('')}</tr>`).join('');
             document.getElementById('table-sites').innerHTML = headerHtml + text.table_sites_rows.map(row => `<tr>${row.map(cell => `<td>${cell}</td>`).join('')}</tr>`).join('');
+            const extHeaderHtml = `<tr>${text.table_ext_headers.map(h => `<th>${h}</th>`).join('')}</tr>`;
+            document.getElementById('table-herdr').innerHTML = extHeaderHtml + text.table_herdr_rows.map(row => `<tr>${row.map(cell => `<td>${cell}</td>`).join('')}</tr>`).join('');
+            document.getElementById('table-orca').innerHTML = extHeaderHtml + text.table_orca_rows.map(row => `<tr>${row.map(cell => `<td>${cell}</td>`).join('')}</tr>`).join('');
             document.getElementById('list-retention').innerHTML = text.list_retention.map(item => `<li>${item}</li>`).join('');
             document.getElementById('list-rights').innerHTML = text.list_rights.map(item => `<li>${item}</li>`).join('');
             document.getElementById('list-security').innerHTML = text.list_security.map(item => `<li>${item}</li>`).join('');
