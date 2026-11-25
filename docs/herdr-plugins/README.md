@@ -50,7 +50,7 @@ herdr 사이드바 맨 아래에 현재 시각, 세계 시간, 타이머, 카운
 
 ### herdr-ai-feedbag
 
-Claude Code, GitHub Copilot, OpenAI Codex, Gemini CLI의 사용량을 herdr Agents 사이드바 아래의 공용 블록에 한 번에 보여 줍니다.
+Claude Code, GitHub Copilot의 사용량을 herdr Agents 사이드바 아래의 공용 블록에 한 번에 보여 줍니다.
 
 - 저장소: [herdr-ai-feedbag](https://github.com/vrwolf1004/herdr-ai-feedbag)
 
@@ -60,16 +60,7 @@ Radio Browser를 검색하거나 저장한 방송국을 별도 플레이어 창 
 
 - 저장소: [herdr-radio](https://github.com/vrwolf1004/herdr-radio)
 
-## 채팅과 게임
-
-### herdr-talk
-
-herdr 안에서 다른 PC의 사람과 채팅합니다. 같은 네트워크에서는 채팅 서버 없이 바로 연결되고, 인터넷을 거치면 종단간 암호화(end-to-end encryption)로 연결됩니다. 권장 버전은 Python 판이며 Python 3만 있으면 됩니다.
-
-> **주의:** 저장소 안내에 따르면 암호화 관련 보완 작업이 진행 중이고, 일부 기능은 아직 검증되지 않았습니다. 검증이 끝나기 전에는 민감한 대화에 쓰지 마세요.
-
-- 설치: `herdr plugin install vrwolf1004/herdr-talk/python`
-- 저장소: [herdr-talk](https://github.com/vrwolf1004/herdr-talk)
+## 게임
 
 ### herdr-tetris
 

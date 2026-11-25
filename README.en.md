@@ -27,9 +27,8 @@ We provide guidance and help for using our products.
 - [herdr-simple-git](https://github.com/vrwolf1004/herdr-simple-git) — Run git pull, commit, and push from herdr, without AI
 - [herdr-stockpulse](https://github.com/vrwolf1004/herdr-stockpulse) — Show stock prices and trends in the dashboard and sidebar
 - [herdr-timekit](https://github.com/vrwolf1004/herdr-timekit) — Show the time, world clocks, a timer, and a counter in the sidebar
-- [herdr-ai-feedbag](https://github.com/vrwolf1004/herdr-ai-feedbag) — Show Claude Code, Copilot, Codex, and Gemini usage in the sidebar
+- [herdr-ai-feedbag](https://github.com/vrwolf1004/herdr-ai-feedbag) — Show Claude Code and Copilot usage in the sidebar
 - [herdr-radio](https://github.com/vrwolf1004/herdr-radio) — Play internet radio inside herdr
-- [herdr-talk](https://github.com/vrwolf1004/herdr-talk) — Chat with people on other PCs inside herdr (security fixes in progress; check before using for sensitive conversations)
 - [herdr-tetris](https://github.com/vrwolf1004/herdr-tetris) — Terminal games: Tetris, Ladder, Snake, and Minesweeper
 - [herdr-dock-grid](https://github.com/vrwolf1004/herdr-dock-grid) — Shared module that manages pane layout for the dock plugins
 

@@ -50,7 +50,7 @@ Shows the current time, world clocks, a timer, and a counter in one block at the
 
 ### herdr-ai-feedbag
 
-Shows usage for Claude Code, GitHub Copilot, OpenAI Codex, and Gemini CLI once, in a shared block at the bottom of the herdr Agents sidebar.
+Shows usage for Claude Code and GitHub Copilot once, in a shared block at the bottom of the herdr Agents sidebar.
 
 - Repository: [herdr-ai-feedbag](https://github.com/vrwolf1004/herdr-ai-feedbag)
 
@@ -60,16 +60,7 @@ Searches Radio Browser or plays your saved stations without a separate player wi
 
 - Repository: [herdr-radio](https://github.com/vrwolf1004/herdr-radio)
 
-## Chat and Games
-
-### herdr-talk
-
-Chat with people on other PCs from inside herdr. Peers on the same network connect directly with no chat server; across the internet, connections use end-to-end encryption. The recommended edition is the Python one, which needs only Python 3.
-
-> **Caution:** The repository notes that security fixes are in progress and some features are not yet verified. Do not use it for sensitive conversations until they are verified.
-
-- Install: `herdr plugin install vrwolf1004/herdr-talk/python`
-- Repository: [herdr-talk](https://github.com/vrwolf1004/herdr-talk)
+## Games
 
 ### herdr-tetris
 

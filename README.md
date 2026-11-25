@@ -27,9 +27,8 @@
 - [herdr-simple-git](https://github.com/vrwolf1004/herdr-simple-git) — AI 없이 git pull, commit, push 실행
 - [herdr-stockpulse](https://github.com/vrwolf1004/herdr-stockpulse) — 주가 현재가와 추세를 대시보드·사이드바에 표시
 - [herdr-timekit](https://github.com/vrwolf1004/herdr-timekit) — 현재 시각, 세계 시간, 타이머, 카운터를 사이드바에 표시
-- [herdr-ai-feedbag](https://github.com/vrwolf1004/herdr-ai-feedbag) — Claude Code, Copilot, Codex, Gemini 사용량을 사이드바에 표시
+- [herdr-ai-feedbag](https://github.com/vrwolf1004/herdr-ai-feedbag) — Claude Code, Copilot 사용량을 사이드바에 표시
 - [herdr-radio](https://github.com/vrwolf1004/herdr-radio) — 인터넷 라디오를 herdr 안에서 재생
-- [herdr-talk](https://github.com/vrwolf1004/herdr-talk) — herdr 안에서 다른 PC 사용자와 채팅 (보안 보완 작업 중이니 민감한 대화에는 사용 전 확인)
 - [herdr-tetris](https://github.com/vrwolf1004/herdr-tetris) — 터미널 게임 (테트리스, 래더, 스네이크, 지뢰찾기)
 - [herdr-dock-grid](https://github.com/vrwolf1004/herdr-dock-grid) — 도크 플러그인들이 쓰는 pane 배치를 관리하는 공용 모듈
 
