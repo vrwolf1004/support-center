@@ -64,6 +64,8 @@
             <table id="table-herdr"></table>
             <h3 id="h-orca">Orca 플러그인</h3>
             <table id="table-orca"></table>
+            <h3 id="h-pickspinners">pickspinners</h3>
+            <ul id="list-pickspinners"></ul>
 
             <h2 id="h-retention">4. 정보 보관 및 파기</h2>
             <ul id="list-retention"></ul>
@@ -97,8 +99,8 @@
                 p_overview: 'Support Center에서 Chrome 확장 및 사이트 운영에 있어 사용자의 개인정보를 최소한으로 수집하고, 사용자 기기에만 저장합니다.',
                 h_principles: '2. 공통 원칙',
                 list_principles: [
-                    '개인 식별 정보 미수집: 이름, 이메일, 계정 정보 등을 수집하지 않습니다',
-                    '로컬 저장소 우선: 수집된 모든 데이터는 사용자 기기에만 저장됩니다',
+                    '개인 식별 정보 미수집: 이름, 이메일, 계정 정보 등을 수집하지 않습니다 (pickspinners 예외: 3번 참고)',
+                    '로컬 저장소 우선: 수집된 모든 데이터는 사용자 기기에만 저장됩니다 (pickspinners 예외: 3번 참고)',
                     '사용자 제어: 확장을 삭제하면 저장된 모든 데이터가 자동으로 삭제됩니다',
                     '외부 API 최소화: 기능상 필요한 경우에만 외부 API를 사용합니다',
                     '투명성: 각 확장의 개인정보 처리방침을 명확히 공개합니다'
@@ -143,21 +145,31 @@
                     ['Radio for Orca', '공개 라디오 스트리밍 사용 (외부 방송 서버에서 스트림 수신)', 'Orca 사이드바에서 인터넷 라디오를 재생합니다'],
                     ['Tetris for Orca', '없음', 'Orca 사이드바 게임']
                 ],
+                h_pickspinners: 'pickspinners',
+                list_pickspinners: [
+                    '회원가입은 없습니다.',
+                    '즐겨찾기 기능에서 이메일을 등록하면 이메일 주소를 수집합니다. 이메일은 즐겨찾기 기능 제공에만 사용합니다.',
+                    '방문 분석을 위해 Google Analytics를 사용합니다. 방문 페이지, 기기·브라우저 정보가 Google 서버로 전송되며 쿠키가 사용됩니다.',
+                    '거부 방법: 브라우저에서 쿠키를 차단하거나 Google 애널리틱스 수집 거부 도구를 설치합니다.',
+                    '보관 기간: 이메일은 즐겨찾기 기능을 이용하는 동안 보관합니다.',
+                    '삭제 요청: dev.ohyt@gmail.com으로 요청하면 등록된 이메일을 지체 없이 삭제합니다.'
+                ],
                 h_retention: '4. 정보 보관 및 파기',
                 list_retention: [
                     '보관: 사용자가 확장을 사용하는 동안 기기에 보관',
                     '파기: 확장 삭제 시 자동으로 모든 데이터 삭제',
-                    '확장 업데이트: 데이터 손실 없음'
+                    '확장 업데이트: 데이터 손실 없음',
+                    '사이트(pickspinners): 이메일 보관 기간과 삭제 방법은 3번 참고'
                 ],
                 h_rights: '5. 사용자의 권리',
                 list_rights: [
                     '확장 언제든지 삭제 가능: 설정 → 확장 프로그램 → 제거',
-                    '데이터 열람 및 삭제: 확장이 로컬에만 저장하므로 사용자가 직접 관리 가능',
+                    '데이터 열람 및 삭제: 확장이 로컬에만 저장하므로 사용자가 직접 관리 가능 (pickspinners 이메일은 3번 항목의 방법으로 삭제 요청)',
                     '설정 제어: 각 확장의 설정을 통해 데이터 수집 범위 조절 가능'
                 ],
                 h_security: '6. 보안',
                 list_security: [
-                    '서드파티 서버로 개인 데이터 전송 금지'
+                    '서드파티 서버로 개인 데이터 전송 금지 (pickspinners의 Google Analytics 전송은 예외: 3번 참고)'
                 ],
                 h_changes: '7. 정책 변경',
                 list_changes: [
@@ -184,8 +196,8 @@
                 p_overview: 'Support Center collects minimal personal information in operating its Chrome extensions and sites, storing it only on the user\'s device.',
                 h_principles: '2. Common Principles',
                 list_principles: [
-                    'No Collection of Personally Identifiable Information: We do not collect names, emails, account information, etc.',
-                    'Local Storage Priority: All collected data is stored only on the user\'s device',
+                    'No Collection of Personally Identifiable Information: We do not collect names, emails, account information, etc. (pickspinners is an exception: see section 3)',
+                    'Local Storage Priority: All collected data is stored only on the user\'s device (pickspinners is an exception: see section 3)',
                     'User Control: Removing the extension automatically deletes all stored data',
                     'Minimal External API Usage: External APIs are used only when necessary for functionality',
                     'Transparency: We publicly disclose each extension\'s privacy policy'
@@ -230,21 +242,31 @@
                     ['Radio for Orca', 'Uses public radio streaming (receives streams from external broadcast servers)', 'Plays internet radio in the Orca sidebar'],
                     ['Tetris for Orca', 'None', 'Game in the Orca sidebar']
                 ],
+                h_pickspinners: 'pickspinners',
+                list_pickspinners: [
+                    'No sign-up required.',
+                    'Registering an email for favorites collects your email address. Emails are used only to provide the favorites feature.',
+                    'Uses Google Analytics for visitor analytics. Page visits and device/browser information are sent to Google servers, and cookies are used.',
+                    'Opt-out: block cookies in your browser or install the Google Analytics opt-out browser add-on.',
+                    'Retention: emails are kept while you use the favorites feature.',
+                    'Deletion request: email dev.ohyt@gmail.com and we will delete your registered email without delay.'
+                ],
                 h_retention: '4. Data Retention and Deletion',
                 list_retention: [
                     'Retention: Data is retained on the device while the extension is in use',
                     'Deletion: All data is automatically deleted when the extension is removed',
-                    'Extension Updates: No data loss during updates'
+                    'Extension Updates: No data loss during updates',
+                    'Sites (pickspinners): see section 3 for email retention and deletion'
                 ],
                 h_rights: '5. User Rights',
                 list_rights: [
                     'Remove Extensions Anytime: Settings → Extensions → Remove',
-                    'Data Access and Deletion: Since extensions store data locally, users manage it directly',
+                    'Data Access and Deletion: Since extensions store data locally, users manage it directly (pickspinners emails: request deletion as described in section 3)',
                     'Control Settings: Each extension\'s settings allow users to control data collection scope'
                 ],
                 h_security: '6. Security',
                 list_security: [
-                    'No personal data transmission to third-party servers'
+                    'No personal data transmission to third-party servers (except pickspinners Google Analytics; see section 3)'
                 ],
                 h_changes: '7. Policy Changes',
                 list_changes: [
@@ -282,6 +304,8 @@
             document.getElementById('h-sites').textContent = text.h_sites;
             document.getElementById('h-herdr').textContent = text.h_herdr;
             document.getElementById('h-orca').textContent = text.h_orca;
+            document.getElementById('h-pickspinners').textContent = text.h_pickspinners;
+            document.getElementById('list-pickspinners').innerHTML = text.list_pickspinners.map(item => `<li>${item}</li>`).join('');
             document.getElementById('h-retention').textContent = text.h_retention;
             document.getElementById('h-rights').textContent = text.h_rights;
             document.getElementById('h-security').textContent = text.h_security;
