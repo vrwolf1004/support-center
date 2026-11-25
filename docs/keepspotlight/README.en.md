@@ -1,6 +1,6 @@
 # KeepSpotlight
 
-A Chrome extension that browses and saves Windows Spotlight lock screen images.
+A Chrome extension that browses and saves Windows Spotlight lock screen and desktop images.
 
 ## Requirements
 
@@ -31,6 +31,10 @@ A Chrome extension that browses and saves Windows Spotlight lock screen images.
 - Hover over an image card to reveal the **Save** button.
 - Saved images are stored in Chrome's default download folder.
 - Click an image to open a fullscreen preview where you can save or delete it.
+
+### Use as Desktop Background
+
+Find the saved image file, right-click it, and select **Set as desktop background**.
 
 ### Saved Tab
 

@@ -11,14 +11,14 @@
 - [Help Me Hide](./#docs%2Fhelpmehide%2FREADME.md) — 텍스트 암호화 숨김 확장
 - [Look At The Sky](./#docs%2Flookatthesky%2FREADME.md) — 전체화면으로 하늘 사진을 감상하는 휴식 확장
 - [DummyUp](./#docs%2Fdummyup%2FREADME.md) — 필드명과 타입을 지정해 더미 JSON 데이터를 생성하는 확장
-- [KeepSpotlight](./#docs%2Fkeepspotlight%2FREADME.md) — Windows Spotlight 잠금화면 이미지를 탐색하고 저장하는 확장
+- [KeepSpotlight](./#docs%2Fkeepspotlight%2FREADME.md) — Windows Spotlight 잠금화면·바탕화면 이미지를 탐색하고 저장하는 확장
 - [AI Usage](./#docs%2Faiusage%2FREADME.md) — Claude.ai와 GitHub Copilot 사용량을 한 번에 확인하는 확장
 
 ## 사이트
 
 - [PickLayer](./#docs%2Fpicklayer%2FREADME.md) — 크로스플랫폼 UI 컴포넌트 라이브러리
 - [No Banner](./#docs%2Fnobanner%2FREADME.md) — 사진 한 장으로 불법 현수막 신고 정보를 준비하는 웹 도구
-- [pickspinners](./#docs%2Fpickspinners%2FREADME.md) — 스피너 커뮤니티
+- [pickspinners](./#docs%2Fpickspinners%2FREADME.md) — 웹 개발자를 위한 무료 HTML/CSS 로딩 스피너 라이브러리
 
 ## herdr 플러그인
 

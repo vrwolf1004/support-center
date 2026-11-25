@@ -11,14 +11,14 @@ We provide guidance and help for using our products.
 - [Help Me Hide](./#docs%2Fhelpmehide%2FREADME.en.md) — Encrypt and hide text with PIN protection
 - [Look At The Sky](./#docs%2Flookatthesky%2FREADME.en.md) — Take a short break while enjoying sky photos in fullscreen
 - [DummyUp](./#docs%2Fdummyup%2FREADME.en.md) — Quickly generate dummy JSON data by specifying field names and types
-- [KeepSpotlight](./#docs%2Fkeepspotlight%2FREADME.en.md) — Browse and save Windows Spotlight lock screen images
+- [KeepSpotlight](./#docs%2Fkeepspotlight%2FREADME.en.md) — Browse and save Windows Spotlight lock screen and desktop images
 - [AI Usage](./#docs%2Faiusage%2FREADME.en.md) — Monitor your Claude.ai and GitHub Copilot usage at a glance
 
 ## Sites
 
 - [PickLayer](./#docs%2Fpicklayer%2FREADME.en.md) — Cross-platform UI component library
 - [No Banner](./#docs%2Fnobanner%2FREADME.en.md) — Prepare illegal banner report information from a single photo
-- [pickspinners](./#docs%2Fpickspinners%2FREADME.en.md) — A community site for spinners
+- [pickspinners](./#docs%2Fpickspinners%2FREADME.en.md) — A free HTML/CSS loading spinner library for web developers
 
 ## herdr Plugins
 

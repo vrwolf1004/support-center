@@ -122,7 +122,7 @@
                 table_sites_rows: [
                     ['PickLayer', '<a href="/docs/picklayer/privacy.html">개인정보 처리방침</a>', '<a href="/docs/picklayer/privacy.html">Privacy Policy</a>'],
                     ['No Banner', '<a href="/docs/nobanner/privacy.html">개인정보 처리방침</a>', '<a href="/docs/nobanner/privacy.html">Privacy Policy</a>'],
-                    ['pickspinners', '회원가입 없음. 방문 분석 도구(Google Analytics) 사용', 'No sign-up. Uses a visitor analytics tool (Google Analytics)']
+                    ['pickspinners', '회원가입은 없습니다. 즐겨찾기에서 이메일을 등록하면 이메일 주소를 수집합니다. 방문 분석 도구(Google Analytics)를 사용하며, 방문 페이지와 기기·브라우저 정보가 Google 서버로 전송되고 쿠키가 사용됩니다. 브라우저에서 쿠키를 차단하거나 Google 애널리틱스 수집 거부 도구를 설치해 거부할 수 있습니다.', 'No sign-up required. Registering an email for favorites collects your email address. Uses Google Analytics: page visits and device/browser information are sent to Google servers, and cookies are used. You can opt out by blocking cookies in your browser or installing the Google Analytics opt-out browser add-on.']
                 ],
                 h_herdr: 'herdr 플러그인',
                 h_orca: 'Orca 플러그인',
@@ -131,7 +131,7 @@
                     ['herdr-devrun', '없음', '로컬에서 개발 서비스를 실행합니다'],
                     ['herdr-obsidian', '없음', '로컬 볼트 파일을 읽고 편집합니다'],
                     ['herdr-simple-git', '사용자가 설정한 Git 저장소와 통신 (pull, push 실행 시)', '설정한 저장소에만 연결합니다'],
-                    ['herdr-stockpulse', '공개 IP를 사용해 주가 데이터 API와 통신', '기본 Yahoo Finance, 선택 시 iTick'],
+                    ['herdr-stockpulse', '주식 코드(종목 코드)를 주가 데이터 API로 전송', '기본 Yahoo Finance, 선택 시 iTick'],
                     ['herdr-timekit', '공휴일 데이터 요청 (Nager.Date)', '한국 공휴일은 내장 데이터로 보완하며 로컬에 캐시합니다'],
                     ['herdr-ai-feedbag', 'Claude Code, GitHub Copilot 사용량 조회 요청', 'Claude Code, GitHub Copilot 사용량을 사이드바에 표시'],
                     ['herdr-radio', '공개 라디오 스트리밍 사용 (외부 방송 서버에서 스트림 수신)', '방송국 재생 및 로컬 설정 저장'],
@@ -157,8 +157,6 @@
                 ],
                 h_security: '6. 보안',
                 list_security: [
-                    'Chrome 확장의 sandbox 환경으로 보호',
-                    'HTTPS를 통한 외부 통신 암호화',
                     '서드파티 서버로 개인 데이터 전송 금지'
                 ],
                 h_changes: '7. 정책 변경',
@@ -170,8 +168,7 @@
                 list_storage: [
                     'Chrome Storage API: 설정, 로컬 데이터',
                     'IndexedDB: 대용량 로컬 데이터 (학습 통계, 이력 등)',
-                    'Clipboard API: 텍스트 복사 기능',
-                    '모든 데이터는 Chrome 프로필 폴더에 암호화되어 저장됩니다'
+                    'Clipboard API: 텍스트 복사 기능'
                 ],
                 h_contact: '9. 문의',
                 p_contact: '개인정보 처리방침에 관한 문의는 아래로 접수해 주세요.',
@@ -212,7 +209,7 @@
                 table_sites_rows: [
                     ['PickLayer', '<a href="/docs/picklayer/privacy.html">개인정보 처리방침</a>', '<a href="/docs/picklayer/privacy.html">Privacy Policy</a>'],
                     ['No Banner', '<a href="/docs/nobanner/privacy.html">개인정보 처리방침</a>', '<a href="/docs/nobanner/privacy.html">Privacy Policy</a>'],
-                    ['pickspinners', 'No sign-up. Uses a visitor analytics tool (Google Analytics)', 'No sign-up. Uses a visitor analytics tool (Google Analytics)']
+                    ['pickspinners', '회원가입은 없습니다. 즐겨찾기에서 이메일을 등록하면 이메일 주소를 수집합니다. 방문 분석 도구(Google Analytics)를 사용하며, 방문 페이지와 기기·브라우저 정보가 Google 서버로 전송되고 쿠키가 사용됩니다. 브라우저에서 쿠키를 차단하거나 Google 애널리틱스 수집 거부 도구를 설치해 거부할 수 있습니다.', 'No sign-up required. Registering an email for favorites collects your email address. Uses Google Analytics: page visits and device/browser information are sent to Google servers, and cookies are used. You can opt out by blocking cookies in your browser or installing the Google Analytics opt-out browser add-on.']
                 ],
                 h_herdr: 'herdr Plugins',
                 h_orca: 'Orca Plugins',
@@ -221,7 +218,7 @@
                     ['herdr-devrun', 'None', 'Runs development services locally'],
                     ['herdr-obsidian', 'None', 'Reads and edits local vault files'],
                     ['herdr-simple-git', 'Communicates with the Git repository you configure (on pull and push)', 'Connects only to repositories you set up'],
-                    ['herdr-stockpulse', 'Uses a public IP to communicate with the stock data API', 'Yahoo Finance by default, iTick optional'],
+                    ['herdr-stockpulse', 'Sends stock symbols (ticker codes) to the stock data API', 'Yahoo Finance by default, iTick optional'],
                     ['herdr-timekit', 'Requests public holiday data (Nager.Date)', 'Korean holidays are supplemented by bundled data and cached locally'],
                     ['herdr-ai-feedbag', 'Requests Claude Code and GitHub Copilot usage data', 'Shows Claude Code and GitHub Copilot usage in the sidebar'],
                     ['herdr-radio', 'Uses public radio streaming (receives streams from external broadcast servers)', 'Plays radio stations and saves local settings'],
@@ -247,8 +244,6 @@
                 ],
                 h_security: '6. Security',
                 list_security: [
-                    'Protected by Chrome extension sandbox environment',
-                    'External communication encrypted via HTTPS',
                     'No personal data transmission to third-party servers'
                 ],
                 h_changes: '7. Policy Changes',
@@ -260,8 +255,7 @@
                 list_storage: [
                     'Chrome Storage API: Settings, local data',
                     'IndexedDB: Large-scale local data (learning statistics, history, etc.)',
-                    'Clipboard API: Text copy functionality',
-                    'All data is encrypted and stored in the Chrome profile folder'
+                    'Clipboard API: Text copy functionality'
                 ],
                 h_contact: '9. Contact',
                 p_contact: 'For questions about this Privacy Policy:',
