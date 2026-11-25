@@ -2,7 +2,7 @@
 
 Plugins for the [herdr](https://herdr.dev) terminal workspace. For each plugin's settings, commands, and troubleshooting, see the repository README and docs linked below.
 
-Every plugin installs the same way:
+Most plugins install the same way. Follow the repository's instructions where they differ:
 
 ```sh
 herdr plugin install vrwolf1004/<repository name>
@@ -15,6 +15,16 @@ herdr plugin install vrwolf1004/<repository name>
 Runs a project's development services (backend, frontend, and so on) as set in `.herdr-devrun.json`. Services run in the project's tab of the shared `devrun` space, and you can start, stop, edit, and delete them from the dashboard. A stopped service keeps its pane, so you can start it again.
 
 - Repository: [herdr-devrun](https://github.com/vrwolf1004/herdr-devrun)
+
+## Documents and Notes
+
+### herdr-obsidian
+
+Browse, read, edit, and search an Obsidian vault from one herdr pane. Notes are plain Markdown files, so a folder synced by Google Drive for desktop also works. It runs as a full-screen terminal app in a pane, not as a sidebar block.
+
+- Repository: [herdr-obsidian](https://github.com/vrwolf1004/herdr-obsidian)
+- Install: clone the repository, build with `cargo build --release`, then run `herdr plugin link .`. Building requires Rust (stable).
+- Requirements: herdr 0.9.0 or later, Windows / Linux / macOS
 
 ## Git
 
@@ -54,13 +64,16 @@ Searches Radio Browser or plays your saved stations without a separate player wi
 
 ### herdr-talk
 
-Chat with people on other PCs from inside herdr. Nearby peers connect directly over the same network, with no chat server. Messages are not stored or encrypted, so use it only on a network you trust.
+Chat with people on other PCs from inside herdr. Peers on the same network connect directly with no chat server; across the internet, connections use end-to-end encryption. The recommended edition is the Python one, which needs only Python 3.
 
+> **Caution:** The repository notes that security fixes are in progress and some features are not yet verified. Do not use it for sensitive conversations until they are verified.
+
+- Install: `herdr plugin install vrwolf1004/herdr-talk/python`
 - Repository: [herdr-talk](https://github.com/vrwolf1004/herdr-talk)
 
 ### herdr-tetris
 
-A terminal Tetris game in the shared `herdr-dock` workspace. It starts on a fake system monitor screen; `Ctrl+T` opens the game.
+Terminal games for the shared `herdr-dock` workspace: Tetris (`1`), Ladder (`2`), Snake (`3`), and Minesweeper (`4`). It starts on a fake system monitor screen; `Ctrl+T` opens the games.
 
 - Repository: [herdr-tetris](https://github.com/vrwolf1004/herdr-tetris)
 

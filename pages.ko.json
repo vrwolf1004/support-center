@@ -12,5 +12,7 @@
   { "path": "docs/aiusage/README.md", "title": "AI Usage" },
   { "path": "docs/herdr-plugins/README.md", "title": "herdr 플러그인" },
   { "path": "docs/nobanner/README.md", "title": "No Banner" },
+  { "path": "docs/pickspinners/README.md", "title": "pickspinners" },
+  { "path": "docs/orca-plugins/README.md", "title": "Orca 플러그인" },
   { "path": "docs/PRIVACY.html", "title": "개인정보 처리방침" }
 ]

@@ -18,10 +18,15 @@
 
 - [PickLayer](./#docs%2Fpicklayer%2FREADME.md) — 크로스플랫폼 UI 컴포넌트 라이브러리
 - [No Banner](./#docs%2Fnobanner%2FREADME.md) — 사진 한 장으로 불법 현수막 신고 정보를 준비하는 웹 도구
+- [pickspinners](./#docs%2Fpickspinners%2FREADME.md) — 스피너 커뮤니티
 
 ## herdr 플러그인
 
-- [herdr 플러그인](./#docs%2Fherdr-plugins%2FREADME.md) — herdr 작업 공간의 대시보드와 사이드바에서 쓰는 플러그인 모음
+- [herdr 플러그인](./#docs%2Fherdr-plugins%2FREADME.md) — herdr 작업 공간의 대시보드, 사이드바, 옵시디언, 채팅, 게임 플러그인 모음
+
+## Orca 플러그인
+
+- [Orca 플러그인](./#docs%2Forca-plugins%2FREADME.md) — Orca 사이드바에서 쓰는 플러그인 모음
 
 ---
 

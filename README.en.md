@@ -18,10 +18,15 @@ We provide guidance and help for using our products.
 
 - [PickLayer](./#docs%2Fpicklayer%2FREADME.en.md) — Cross-platform UI component library
 - [No Banner](./#docs%2Fnobanner%2FREADME.en.md) — Prepare illegal banner report information from a single photo
+- [pickspinners](./#docs%2Fpickspinners%2FREADME.en.md) — A community site for spinners
 
 ## herdr Plugins
 
-- [herdr Plugins](./#docs%2Fherdr-plugins%2FREADME.en.md) — Plugins for the herdr dashboard and sidebar
+- [herdr Plugins](./#docs%2Fherdr-plugins%2FREADME.en.md) — Plugins for herdr: dashboards, sidebar, Obsidian, chat, and games
+
+## Orca Plugins
+
+- [Orca Plugins](./#docs%2Forca-plugins%2FREADME.en.md) — Plugins for the Orca sidebar
 
 ---
 

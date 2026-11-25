@@ -12,5 +12,7 @@
   { "path": "docs/aiusage/README.en.md", "title": "AI Usage" },
   { "path": "docs/herdr-plugins/README.en.md", "title": "herdr Plugins" },
   { "path": "docs/nobanner/README.en.md", "title": "No Banner" },
+  { "path": "docs/pickspinners/README.en.md", "title": "pickspinners" },
+  { "path": "docs/orca-plugins/README.en.md", "title": "Orca Plugins" },
   { "path": "docs/PRIVACY.html", "title": "Privacy Policy" }
 ]

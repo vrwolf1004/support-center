@@ -2,7 +2,7 @@
 
 [herdr](https://herdr.dev) 터미널 작업 공간에서 쓰는 플러그인 모음입니다. 각 플러그인의 설정, 명령, 문제 해결은 저장소의 README와 docs에 있으니 아래 링크를 봅니다.
 
-설치는 모두 같은 형식입니다.
+설치는 대부분 같은 형식입니다. 예외는 저장소 안내를 따릅니다.
 
 ```sh
 herdr plugin install vrwolf1004/<저장소 이름>
@@ -15,6 +15,16 @@ herdr plugin install vrwolf1004/<저장소 이름>
 프로젝트의 개발 서비스(백엔드, 프론트엔드 등)를 `.herdr-devrun.json` 설정대로 실행합니다. 서비스는 공유 `devrun` 공간의 프로젝트 탭에서 돌고, 대시보드에서 시작·중지·수정·삭제를 할 수 있습니다. 중지해도 pane은 남아 다시 시작할 수 있습니다.
 
 - 저장소: [herdr-devrun](https://github.com/vrwolf1004/herdr-devrun)
+
+## 문서와 노트
+
+### herdr-obsidian
+
+옵시디언(Obsidian) 보관함을 herdr pane 하나에서 탐색하고 읽고 편집하고 검색합니다. 노트는 일반 Markdown 파일이라 Google Drive 데스크톱 앱으로 동기화된 폴더도 쓸 수 있습니다. 전체 화면 터미널 앱으로 뜨며, 사이드바 블록은 아닙니다.
+
+- 저장소: [herdr-obsidian](https://github.com/vrwolf1004/herdr-obsidian)
+- 설치: 저장소를 받아 `cargo build --release`로 빌드한 뒤 `herdr plugin link .`로 연결합니다. 빌드에는 Rust(stable)가 필요합니다.
+- 요구사항: herdr 0.9.0 이상, Windows / Linux / macOS
 
 ## Git
 
@@ -54,13 +64,16 @@ Radio Browser를 검색하거나 저장한 방송국을 별도 플레이어 창 
 
 ### herdr-talk
 
-같은 네트워크에 있는 다른 PC의 사람과 herdr 안에서 채팅합니다. 채팅 서버 없이 가까운 상대와 직접 연결됩니다. 메시지는 저장하거나 암호화하지 않으므로 믿을 수 있는 네트워크에서만 쓰는 것을 권합니다.
+herdr 안에서 다른 PC의 사람과 채팅합니다. 같은 네트워크에서는 채팅 서버 없이 바로 연결되고, 인터넷을 거치면 종단간 암호화(end-to-end encryption)로 연결됩니다. 권장 버전은 Python 판이며 Python 3만 있으면 됩니다.
 
+> **주의:** 저장소 안내에 따르면 암호화 관련 보완 작업이 진행 중이고, 일부 기능은 아직 검증되지 않았습니다. 검증이 끝나기 전에는 민감한 대화에 쓰지 마세요.
+
+- 설치: `herdr plugin install vrwolf1004/herdr-talk/python`
 - 저장소: [herdr-talk](https://github.com/vrwolf1004/herdr-talk)
 
 ### herdr-tetris
 
-herdr 공용 `herdr-dock` 작업 공간에서 도는 터미널 테트리스입니다. 처음에는 가짜 시스템 모니터 화면이 보이고, `Ctrl+T`로 게임 화면을 엽니다.
+herdr 공용 `herdr-dock` 작업 공간에서 도는 터미널 게임입니다. 테트리스(`1`), 래더(`2`), 스네이크(`3`), 지뢰찾기(`4`)를 할 수 있습니다. 처음에는 가짜 시스템 모니터 화면이 보이고, `Ctrl+T`로 게임 화면을 엽니다.
 
 - 저장소: [herdr-tetris](https://github.com/vrwolf1004/herdr-tetris)
 
