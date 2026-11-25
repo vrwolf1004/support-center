@@ -4,15 +4,10 @@
   { "path": "docs/subdash/README.en.md", "title": "SubDash" },
   { "path": "docs/stockpulse/README.en.md", "title": "StockPulse" },
   { "path": "docs/pichunter/README.en.md", "title": "PicHunter" },
-  { "path": "docs/picklayer/README.en.md", "title": "PickLayer" },
   { "path": "docs/helpmehide/README.en.md", "title": "Help Me Hide" },
   { "path": "docs/lookatthesky/README.en.md", "title": "Look At The Sky" },
   { "path": "docs/dummyup/README.en.md", "title": "DummyUp" },
   { "path": "docs/keepspotlight/README.en.md", "title": "KeepSpotlight" },
   { "path": "docs/aiusage/README.en.md", "title": "AI Usage" },
-  { "path": "docs/herdr-plugins/README.en.md", "title": "herdr Plugins" },
-  { "path": "docs/nobanner/README.en.md", "title": "No Banner" },
-  { "path": "docs/pickspinners/README.en.md", "title": "pickspinners" },
-  { "path": "docs/orca-plugins/README.en.md", "title": "Orca Plugins" },
   { "path": "docs/PRIVACY.html", "title": "Privacy Policy" }
 ]
