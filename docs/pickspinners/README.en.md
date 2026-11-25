@@ -5,6 +5,7 @@ A free HTML/CSS loading spinner library for web developers.
 ## Deployment URLs
 
 - Website: [www.pickspinners.com](https://www.pickspinners.com/)
+- Privacy policy: [www.pickspinners.com/privacy](https://www.pickspinners.com/privacy)
 - GitHub: [vrwolf1004/web-pickspinners](https://github.com/vrwolf1004/web-pickspinners)
 
 ## Key Features
@@ -14,5 +15,5 @@ A free HTML/CSS loading spinner library for web developers.
 - **Favorites**: choose up to 3 and register by email
 - **Multilingual**: 8 languages (Korean, English, Japanese, Spanish, French, German, Russian, Chinese)
 - **Responsive**: supports mobile, tablet, and desktop
-- **Open source**: CC0 / MIT license
+- **Open source**: CC0 license (LICENSE.txt)
 - **Automatic deployment**: GitHub Actions + Cloudflare Pages/Workers
