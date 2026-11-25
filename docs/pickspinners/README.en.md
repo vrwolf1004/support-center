@@ -6,7 +6,6 @@ A free HTML/CSS loading spinner library for web developers.
 
 - Website: [www.pickspinners.com](https://www.pickspinners.com/)
 - Privacy policy: [www.pickspinners.com/privacy](https://www.pickspinners.com/privacy)
-- GitHub: [vrwolf1004/web-pickspinners](https://github.com/vrwolf1004/web-pickspinners)
 
 ## Key Features
 

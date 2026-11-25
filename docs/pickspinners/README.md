@@ -6,7 +6,6 @@
 
 - 사이트: [www.pickspinners.com](https://www.pickspinners.com/)
 - 개인정보 처리방침: [www.pickspinners.com/privacy](https://www.pickspinners.com/privacy)
-- GitHub: [vrwolf1004/web-pickspinners](https://github.com/vrwolf1004/web-pickspinners)
 
 ## 주요 기능
 
